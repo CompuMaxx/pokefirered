@@ -607,7 +607,11 @@ SECTIONS {
         src/mystery_event_msg.o(.rodata);
         data/mystery_event_msg.o(.rodata);
         src/m4a_tables.o(.rodata);
-        data/sound_data.o(.rodata);
+        src/voice_groups.o(.rodata);
+        src/programmable_wave_data.o(.rodata);
+        src/music_player_table.o(.rodata);
+        src/song_table.o(.rodata);
+        src/direct_sound_data.o(.rodata);
     } =0
 
     song_data :
