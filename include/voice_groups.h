@@ -18,6 +18,19 @@ struct VoiceSquare
     u8 release;
 };
 
+struct VoiceProgrammable
+{
+    u8 type;
+    u8 key;
+    u8 pan;
+    u8 unk3;
+    struct WaveData *wav;
+    u8 attack;
+    u8 decay;
+    u8 sustain;
+    u8 release;
+};
+
 struct VoiceNoise
 {
     u8 type;
@@ -45,66 +58,211 @@ union VoiceGroup
 {
     struct ToneData toneData;
     struct VoiceSquare square;
+    struct VoiceProgrammable programmable;
     struct VoiceNoise noise;
     struct VoiceKeySplit keySplit;
 };
 
-#define VOICE_DIRECTSOUND(base_midi_key,pan,sample_data_pointer,attack,decay,sustain,release)       \
-    {.toneData = {0, base_midi_key, 0,(pan)?(0x80|pan):0, (struct WaveData*)&sample_data_pointer,   \
-    attack, decay, sustain, release}}                                                               \
+#define VOICE_DIRECTSOUND(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
+    {.toneData =                                                                                    \
+        {                                                                                           \
+            .type = 0,                                                                              \
+            .key = base_midi_key,                                                                   \
+            .pan_sweep = (_pan)?(0x80|_pan):0,                                                      \
+            .wav = (struct WaveData*)&sample_data_pointer,                                          \
+            .attack = _attack,                                                                      \
+            .decay = _decay,                                                                        \
+            .sustain = _sustain,                                                                    \
+            .release = _release                                                                     \
+        }                                                                                           \
+    }
 
-#define VOICE_DIRECTSOUND_NO_RESAMPLE(base_midi_key,pan,sample_data_pointer,attack,decay,sustain,release) \
-    {.toneData = {8, base_midi_key, 0,(pan)?(0x80|pan):0, (struct WaveData*)&sample_data_pointer,         \
-    attack, decay, sustain, release}}                                                                     \
+#define VOICE_DIRECTSOUND_NO_RESAMPLE(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
+    {.toneData =                                                                                                \
+        {                                                                                                       \
+            .type = 8,                                                                                          \
+            .key = base_midi_key,                                                                               \
+            .pan_sweep = (_pan)?(0x80|_pan):0,                                                                  \
+            .wav = (struct WaveData*)&sample_data_pointer,                                                      \
+            .attack = _attack,                                                                                  \
+            .decay = _decay,                                                                                    \
+            .sustain = _sustain,                                                                                \
+            .release = _release                                                                                 \
+        }                                                                                                       \
+    }
 
-#define VOICE_DIRECTSOUND_ALT(base_midi_key,pan,sample_data_pointer,attack,decay,sustain,release)  \
-    {.toneData = {16, base_midi_key, 0,(pan)?(0x80|pan):0, (struct WaveData*)&sample_data_pointer, \
-    attack, decay, sustain, release}}                                                              \
+#define VOICE_DIRECTSOUND_ALT(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
+    {.toneData =                                                                                        \
+        {                                                                                               \
+            .type = 16,                                                                                 \
+            .key = base_midi_key,                                                                       \
+            .pan_sweep = (_pan)?(0x80|_pan):0,                                                          \
+            .wav = (struct WaveData*)&sample_data_pointer,                                              \
+            .attack = _attack,                                                                          \
+            .decay = _decay,                                                                            \
+            .sustain = _sustain,                                                                        \
+            .release = _release                                                                         \
+        }                                                                                               \
+    }
 
-#define VOICE_SQUARE_1(base_midi_key,pan,sweep,duty_cycle,attack,decay,sustain,release) \
-    {.square = {1, base_midi_key, (pan)?(0x80|pan):0, sweep, (duty_cycle & 3),          \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                         \
 
-#define VOICE_SQUARE_1_ALT(base_midi_key,pan,sweep,duty_cycle,attack,decay,sustain,release) \
-    {.square = {9, base_midi_key, (pan)?(0x80|pan):0, sweep, (duty_cycle & 3),              \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                             \
+#define VOICE_SQUARE_1(base_midi_key,_pan,_sweep,_duty_cycle,_attack,_decay,_sustain,_release)  \
+    {.square =                                                                                  \
+        {                                                                                       \
+            .type = 1,                                                                          \
+            .key = base_midi_key,                                                               \
+            .pan = (_pan)?(0x80|_pan):0,                                                        \
+            .sweep = _sweep,                                                                    \
+            .duty_cycle = (_duty_cycle & 3),                                                    \
+            .attack = (_attack & 7),                                                            \
+            .decay = (_decay & 7),                                                              \
+            .sustain = (_sustain & 15),                                                         \
+            .release = (_release & 7)                                                           \
+        }                                                                                       \
+    }
 
-#define VOICE_SQUARE_2(base_midi_key,pan,duty_cycle,attack,decay,sustain,release)   \
-    {.square = {2, base_midi_key, (pan)?(0x80|pan):0, 0, (duty_cycle & 3),          \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                     \
+#define VOICE_SQUARE_1_ALT(base_midi_key,_pan,_sweep,_duty_cycle,_attack,_decay,_sustain,_release)  \
+    {.square =                                                                                      \
+        {                                                                                           \
+            .type = 9,                                                                              \
+            .key = base_midi_key,                                                                   \
+            .pan = (_pan)?(0x80|_pan):0,                                                            \
+            .sweep = _sweep,                                                                        \
+            .duty_cycle = (_duty_cycle & 3),                                                        \
+            .attack = (_attack & 7),                                                                \
+            .decay = (_decay & 7),                                                                  \
+            .sustain = (_sustain & 15),                                                             \
+            .release = (_release & 7)                                                               \
+        }                                                                                           \
+    }
 
-#define VOICE_SQUARE_2_ALT(base_midi_key,pan,duty_cycle,attack,decay,sustain,release)   \
-    {.square = {10, base_midi_key, (pan)?(0x80|pan):0, 0, (duty_cycle & 3),             \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                         \
+#define VOICE_SQUARE_2(base_midi_key,_pan,_duty_cycle,_attack,_decay,_sustain,_release) \
+    {.square =                                                                          \
+        {                                                                               \
+            .type = 2,                                                                  \
+            .key = base_midi_key,                                                       \
+            .pan = (_pan)?(0x80|_pan):0,                                                \
+            .duty_cycle = (_duty_cycle & 3),                                            \
+            .attack = (_attack & 7),                                                    \
+            .decay = (_decay & 7),                                                      \
+            .sustain = (_sustain & 15),                                                 \
+            .release = (_release & 7)                                                   \
+        }                                                                               \
+    }
 
-#define VOICE_PROGRAMMABLE_WAVE(base_midi_key,pan,wave_samples_pointer,attack,decay,sustain,release) \
-    {.toneData = {3, base_midi_key, (pan)?(0x80|pan):0, 0, (struct WaveData*)&wave_samples_pointer,  \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                                      \
+#define VOICE_SQUARE_2_ALT(base_midi_key,_pan,_duty_cycle,_attack,_decay,_sustain,_release) \
+    {.square =                                                                              \
+        {                                                                                   \
+            .type = 10,                                                                     \
+            .key = base_midi_key,                                                           \
+            .pan = (_pan)?(0x80|_pan):0,                                                    \
+            .duty_cycle = (_duty_cycle & 3),                                                \
+            .attack = (_attack & 7),                                                        \
+            .decay = (_decay & 7),                                                          \
+            .sustain = (_sustain & 15),                                                     \
+            .release = (_release & 7)                                                       \
+        }                                                                                   \
+    }
 
-#define VOICE_PROGRAMMABLE_WAVE_ALT(base_midi_key,pan,wave_samples_pointer,attack,decay,sustain,release) \
-    {.toneData = {11, base_midi_key, (pan)?(0x80|pan):0, 0, (struct WaveData*)&wave_samples_pointer,     \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                                          \
 
-#define VOICE_NOISE(base_midi_key,pan,period,attack,decay,sustain,release)      \
-    {.noise = {4, base_midi_key, (pan)?(0x80|pan):0, 0, (period & 1),           \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                 \
+#define VOICE_PROGRAMMABLE_WAVE(base_midi_key,_pan,wave_samples_pointer,_attack,_decay,_sustain,_release)   \
+    {.programmable =                                                                                        \
+        {                                                                                                   \
+            .type = 3,                                                                                      \
+            .key = base_midi_key,                                                                           \
+            .pan = (_pan)?(0x80|_pan):0,                                                                    \
+            .wav = (struct WaveData*)&wave_samples_pointer,                                                 \
+            .attack = (_attack & 7),                                                                        \
+            .decay = (_decay & 7),                                                                          \
+            .sustain = (_sustain & 15),                                                                     \
+            .release = (_release & 7)                                                                       \
+        }                                                                                                   \
+    }
 
-#define VOICE_NOISE_ALT(base_midi_key,pan,period,attack,decay,sustain,release)  \
-    {.noise = {12, base_midi_key, (pan)?(0x80|pan):0, 0, (period & 1),          \
-     (attack & 7), (decay & 7), (sustain & 15), (release & 7)}}                 \
+#define VOICE_PROGRAMMABLE_WAVE_ALT(base_midi_key,_pan,wave_samples_pointer,_attack,_decay,_sustain,_release)   \
+    {.programmable =                                                                                            \
+        {                                                                                                       \
+            .type = 11,                                                                                         \
+            .key = base_midi_key,                                                                               \
+            .pan = (_pan)?(0x80|_pan):0,                                                                        \
+            .wav = (struct WaveData*)&wave_samples_pointer,                                                     \
+            .attack = (_attack & 7),                                                                            \
+            .decay = (_decay & 7),                                                                              \
+            .sustain = (_sustain & 15),                                                                         \
+            .release = (_release & 7)                                                                           \
+        }                                                                                                       \
+    }
 
-#define VOICE_KEYSPLIT(voice_group_pointer, keysplit_table_pointer)         \
-    {.keySplit = {64, 0, 0, 0, (union VoiceGroup *)&voice_group_pointer,    \
-     (u8*)keysplit_table_pointer}}                                          \
 
-#define VOICE_KEYSPLIT_ALL(voice_group_pointer)                                 \
-    {.keySplit = {128, 0, 0, 0, (union VoiceGroup*)&voice_group_pointer, 0}}    \
 
-#define CRY(sample)                                             \
-    {32, 60, 0, 0, (struct WaveData*)&sample, 255, 0, 255, 0}   \
+#define VOICE_NOISE(base_midi_key,_pan,_period,_attack,_decay,_sustain,_release)    \
+    {.noise =                                                                       \
+    {                                                                               \
+            .type = 4,                                                              \
+            .key = base_midi_key,                                                   \
+            .pan = (_pan)?(0x80|_pan):0,                                            \
+            .period = (_period & 1),                                                \
+            .attack = (_attack & 7),                                                \
+            .decay = (_decay & 7),                                                  \
+            .sustain = (_sustain & 15),                                             \
+            .release = (_release & 7)                                               \
+        }                                                                           \
+    }
 
-#define CRY_REVERSE(sample)                                     \
-    {48, 60, 0, 0, (struct WaveData*)&sample, 255, 0, 255, 0}   \
+#define VOICE_NOISE_ALT(base_midi_key,_pan,_period,_attack,_decay,_sustain,_release)\
+    {.noise =                                                                       \
+    {                                                                               \
+            .type = 12,                                                             \
+            .key = base_midi_key,                                                   \
+            .pan = (_pan)?(0x80|_pan):0,                                            \
+            .period = (_period & 1),                                                \
+            .attack = (_attack & 7),                                                \
+            .decay = (_decay & 7),                                                  \
+            .sustain = (_sustain & 15),                                             \
+            .release = (_release & 7)                                               \
+        }                                                                           \
+    }
+
+
+#define VOICE_KEYSPLIT(voice_group_pointer, keysplit_table_pointer) \
+    {.keySplit =                                                    \
+        {                                                           \
+            .type = 64,                                             \
+            .voiceGroup = (union VoiceGroup*)&voice_group_pointer,  \
+            .keysplit_table_ptr = (u8*)keysplit_table_pointer       \
+        }                                                           \
+    }
+
+#define VOICE_KEYSPLIT_ALL(voice_group_pointer)                     \
+    {.keySplit =                                                    \
+        {                                                           \
+            .type = 128,                                            \
+            .voiceGroup = (union VoiceGroup*)&voice_group_pointer,  \
+        }                                                           \
+    }
+
+
+#define CRY(sample)                         \
+    {                                       \
+        .type = 32,                         \
+        .key = 60,                          \
+        .wav = (struct WaveData*)&sample,   \
+        .attack = 255,                      \
+        .decay = 0,                         \
+        .sustain = 255,                     \
+        .release = 0                        \
+    }
+
+#define CRY_REVERSE(sample)                 \
+    {                                       \
+        .type = 48,                         \
+        .key = 60,                          \
+        .wav = (struct WaveData*)&sample,   \
+        .attack = 255,                      \
+        .decay = 0,                         \
+        .sustain = 255,                     \
+        .release = 0                        \
+    }
 
 extern const union VoiceGroup voicegroup000[];
 extern const union VoiceGroup voicegroup001[];
