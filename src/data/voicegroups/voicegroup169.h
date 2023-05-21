@@ -1,7 +1,7 @@
 
 const union VoiceGroup voicegroup169[] =
 {
-    VOICE_KEYSPLIT_ALL(voicegroup001),
+    [DRUMKIT_STANDARD] = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_001),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
@@ -57,9 +57,9 @@ const union VoiceGroup voicegroup169[] =
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
-    VOICE_KEYSPLIT(voicegroup005, KEYSPLITTABLE_3_PTR),
+    VOICE_KEYSPLIT(voicegroup_trumpet, KEYSPLITTABLE_TRUMPET_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
-    VOICE_KEYSPLIT(voicegroup006, KEYSPLITTABLE_4_PTR),
+    VOICE_KEYSPLIT(voicegroup_tuba, KEYSPLITTABLE_TUBA_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),

@@ -1,7 +1,7 @@
 
 const union VoiceGroup voicegroup183[] =
 {
-    VOICE_KEYSPLIT_ALL(voicegroup002),
+    [DRUMKIT_STANDARD] = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_002),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),

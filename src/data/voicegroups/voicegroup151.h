@@ -1,7 +1,7 @@
 
 const union VoiceGroup voicegroup151[] =
 {
-    VOICE_KEYSPLIT_ALL(voicegroup002),
+    [DRUMKIT_STANDARD] = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_002),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
@@ -49,7 +49,7 @@ const union VoiceGroup voicegroup151[] =
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 0, 193, 127),
-    VOICE_KEYSPLIT(voicegroup004, KEYSPLITTABLE_2_PTR),
+    VOICE_KEYSPLIT(voicegroup_string_ensemble, KEYSPLITTABLE_STRING_ENSEMBLE_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
@@ -57,11 +57,11 @@ const union VoiceGroup voicegroup151[] =
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
-    VOICE_KEYSPLIT(voicegroup005, KEYSPLITTABLE_3_PTR),
+    VOICE_KEYSPLIT(voicegroup_trumpet, KEYSPLITTABLE_TRUMPET_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
-    VOICE_KEYSPLIT(voicegroup006, KEYSPLITTABLE_4_PTR),
+    VOICE_KEYSPLIT(voicegroup_tuba, KEYSPLITTABLE_TUBA_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
-    VOICE_KEYSPLIT(voicegroup007, KEYSPLITTABLE_5_PTR),
+    VOICE_KEYSPLIT(voicegroup_french_horn, KEYSPLITTABLE_FRENCH_HORN_PTR),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),

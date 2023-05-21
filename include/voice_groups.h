@@ -2,6 +2,7 @@
 #define GUARD_VOICE_GROUPS_H
 
 #include "gba/m4a_internal.h"
+#include "constants/general_midi.h"
 
 union VoiceGroup;
 
@@ -50,8 +51,8 @@ struct VoiceKeySplit
     u8 key;
     u8 length;
     u8 pan_sweep;
-    union VoiceGroup *voiceGroup;
-    u8 * keysplit_table_ptr;
+    const union VoiceGroup *voiceGroup;
+    const u8 * keysplit_table_ptr;
 };
 
 union VoiceGroup
@@ -62,6 +63,12 @@ union VoiceGroup
     struct VoiceNoise noise;
     struct VoiceKeySplit keySplit;
 };
+
+#define DEFAULT_VOICE   {.square = {.type = 1, .key = 60, .pan = 0, .sweep = 0, .duty_cycle = 2, .attack = 0, .decay = 0, .sustain = 15, .release = 0}}
+
+//Voicegroups should be auto-populated with a DEFAULT VOICE when no voice is defined for a note/instrument.
+//It is necessary to indicate where the voicegroup starts and ends.
+#define VOICEGROUP_FILLER(start,end) [start ... end] = DEFAULT_VOICE
 
 #define VOICE_DIRECTSOUND(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
     {.toneData =                                                                                    \
@@ -228,17 +235,17 @@ union VoiceGroup
     {.keySplit =                                                    \
         {                                                           \
             .type = 64,                                             \
-            .voiceGroup = (union VoiceGroup*)&voice_group_pointer,  \
-            .keysplit_table_ptr = (u8*)keysplit_table_pointer       \
+            .voiceGroup = voice_group_pointer,                      \
+            .keysplit_table_ptr = keysplit_table_pointer            \
         }                                                           \
     }
 
-#define VOICE_KEYSPLIT_ALL(voice_group_pointer)                     \
-    {.keySplit =                                                    \
-        {                                                           \
-            .type = 128,                                            \
-            .voiceGroup = (union VoiceGroup*)&voice_group_pointer,  \
-        }                                                           \
+#define VOICE_KEYSPLIT_ALL(voice_group_pointer) \
+    {.keySplit =                                \
+        {                                       \
+            .type = 128,                        \
+            .voiceGroup = voice_group_pointer,  \
+        }                                       \
     }
 
 
@@ -264,14 +271,20 @@ union VoiceGroup
         .release = 0                        \
     }
 
+extern const u8 KeySplitTable1[];
+extern const u8 KeySplitTable2[];
+extern const u8 KeySplitTable3[];
+extern const u8 KeySplitTable4[];
+extern const u8 KeySplitTable5[];
+
 extern const union VoiceGroup voicegroup000[];
 extern const union VoiceGroup voicegroup001[];
 extern const union VoiceGroup voicegroup002[];
-extern const union VoiceGroup voicegroup003[];
-extern const union VoiceGroup voicegroup004[];
-extern const union VoiceGroup voicegroup005[];
-extern const union VoiceGroup voicegroup006[];
-extern const union VoiceGroup voicegroup007[];
+extern const union VoiceGroup voicegroup_piano1[];
+extern const union VoiceGroup voicegroup_string_ensemble[];
+extern const union VoiceGroup voicegroup_trumpet[];
+extern const union VoiceGroup voicegroup_tuba[];
+extern const union VoiceGroup voicegroup_french_horn[];
 extern const union VoiceGroup voicegroup008[];
 extern const union VoiceGroup voicegroup009[];
 extern const union VoiceGroup voicegroup010[];

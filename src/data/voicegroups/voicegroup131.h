@@ -1,8 +1,8 @@
 
 const union VoiceGroup voicegroup131[] =
 {
-    VOICE_KEYSPLIT_ALL(voicegroup002),
-    VOICE_KEYSPLIT(voicegroup003, KEYSPLITTABLE_1_PTR),
+    [DRUMKIT_STANDARD] = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_002),
+    VOICE_KEYSPLIT(voicegroup_piano1, KEYSPLITTABLE_PIANO1_PTR),
     VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_steinway_b_piano, 128, 204, 51, 242),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),

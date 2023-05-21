@@ -1,14 +1,9 @@
 #include "global.h"
 #include "voice_groups.h"
 
-static const u8 KeySplitTable1[];
-static const u8 KeySplitTable2[];
-static const u8 KeySplitTable3[];
-static const u8 KeySplitTable4[];
-static const u8 KeySplitTable5[];
 
 /**
- * @note:
+ * old @note:
  * Due to the way mks4agb (Nintendo's tool) works, key split table labels can
  * appear before the actual start of the key split table data. If you look at
  * the first keysplit table (KeySplitTable1), you'll notice it's offset backwards
@@ -22,141 +17,76 @@ static const u8 KeySplitTable5[];
  * any extra offset calculation.
 */
 
-#define KEYSPLITTABLE_1_PTR (&KeySplitTable1) - 36
-#define KEYSPLITTABLE_2_PTR (&KeySplitTable2) - 36
-#define KEYSPLITTABLE_3_PTR (&KeySplitTable3) - 36
-#define KEYSPLITTABLE_4_PTR (&KeySplitTable4) - 24
-#define KEYSPLITTABLE_5_PTR (&KeySplitTable5) - 36
+/**
+ * ACIMUT: 2023/04/11
+ * @note:
+ * In real life, most instruments have a slightly different sound depending
+ * on the range of notes in which they are being played.
+ * 
+ * To simulate this phenomenon and give more realism to the sound source,
+ * different sound samples of the same instrument are used at different
+ * frequencies corresponding to different ranges of notes.
+ * 
+ * In this case, we use the KeySplitTable to distinguish which sound samples
+ * are played in a certain range of notes. This one can handle note ranges
+ * from C-1 - 8.176Hz (0) to G9 - 12543.850Hz (127); it being useless to have
+ * more than 128 sound samples for a KeySplitTable. However, by using
+ * VOICE_KEYSPLIT_ALL each note (from C-1 to G9 or 0 to 127) can represent
+ * the instrument map in General MIDI.
+ * 
+ * The KeySplitTable does not necessarily have to start from zero (C-1 at 8.176Hz),
+ * because it can start from the significant note of the range of notes to be
+ * represented, as long as the use of notes below the initial one was to be omitted.
+ * 
+ * For FRLG and RSE, the KeySplitTables start from C2 (36), except KeySplitTable4
+ * which starts from C1 (24) because the range of notes in which the TUBA sounds
+ * is lower than the rest.
+ * 
+*/
+
+// key split table start note
+#define START_KST1   NOTE_C2
+#define START_KST2   NOTE_C2
+#define START_KST3   NOTE_C2
+#define START_KST4   NOTE_C1
+#define START_KST5   NOTE_C2
+
+// key split table label
+#define KEYSPLITTABLE_PIANO1_PTR            KeySplitTable1 - NOTE_C2
+#define KEYSPLITTABLE_STRING_ENSEMBLE_PTR   KeySplitTable2 - NOTE_C2
+#define KEYSPLITTABLE_TRUMPET_PTR           KeySplitTable3 - NOTE_C2
+#define KEYSPLITTABLE_TUBA_PTR              KeySplitTable4 - NOTE_C1
+#define KEYSPLITTABLE_FRENCH_HORN_PTR       KeySplitTable5 - NOTE_C2
+
+// for key split table purpose
+#define SAMPLE_VOICE_0    0
+#define SAMPLE_VOICE_1    1
+#define SAMPLE_VOICE_2    2
+#define SAMPLE_VOICE_3    3
+
+// just like keySplitTable, voicegroup0002 starts from BASS_DRUM_1
+#define VG002_START BASS_DRUM_1
+
+//drumktiks
+#define VOICE_DRUMKIT_001       voicegroup001
+#define VOICE_DRUMKIT_002       voicegroup002 - VG002_START
+#define VOICE_DRUMKIT_177       voicegroup177
+#define VOICE_DRUMKIT_190       voicegroup190
 
 #include "data/voicegroups/voicegroup000.h"
 #include "data/voicegroups/voicegroup001.h"
 #include "data/voicegroups/voicegroup002.h"
-#include "data/voicegroups/voicegroup003.h"
-#include "data/voicegroups/voicegroup004.h"
-#include "data/voicegroups/voicegroup005.h"
-#include "data/voicegroups/voicegroup006.h"
-#include "data/voicegroups/voicegroup007.h"
+#include "data/voicegroups/voicegroup003.h" // voicegroup_piano1
+#include "data/voicegroups/voicegroup004.h" // voicegroup_string_ensemble
+#include "data/voicegroups/voicegroup005.h" // voicegroup_trumpet
+#include "data/voicegroups/voicegroup006.h" // voicegroup_tuba
+#include "data/voicegroups/voicegroup007.h" // voicegroup_french_horn
 #include "data/voicegroups/voicegroup008.h"
 #include "data/voicegroups/voicegroup009.h"
 #include "data/voicegroups/voicegroup010.h"
 #include "data/voicegroups/voicegroup011.h"
 #include "data/voicegroups/voicegroup012.h"
-/*
-#include "data/voicegroups/voicegroup013.h"
-#include "data/voicegroups/voicegroup014.h"
-#include "data/voicegroups/voicegroup015.h"
-#include "data/voicegroups/voicegroup016.h"
-#include "data/voicegroups/voicegroup017.h"
-#include "data/voicegroups/voicegroup018.h"
-#include "data/voicegroups/voicegroup019.h"
-#include "data/voicegroups/voicegroup020.h"
-#include "data/voicegroups/voicegroup021.h"
-#include "data/voicegroups/voicegroup022.h"
-#include "data/voicegroups/voicegroup023.h"
-#include "data/voicegroups/voicegroup024.h"
-#include "data/voicegroups/voicegroup025.h"
-#include "data/voicegroups/voicegroup026.h"
-#include "data/voicegroups/voicegroup027.h"
-#include "data/voicegroups/voicegroup028.h"
-#include "data/voicegroups/voicegroup029.h"
-#include "data/voicegroups/voicegroup030.h"
-#include "data/voicegroups/voicegroup031.h"
-#include "data/voicegroups/voicegroup032.h"
-#include "data/voicegroups/voicegroup033.h"
-#include "data/voicegroups/voicegroup034.h"
-#include "data/voicegroups/voicegroup035.h"
-#include "data/voicegroups/voicegroup036.h"
-#include "data/voicegroups/voicegroup037.h"
-#include "data/voicegroups/voicegroup038.h"
-#include "data/voicegroups/voicegroup039.h"
-#include "data/voicegroups/voicegroup040.h"
-#include "data/voicegroups/voicegroup041.h"
-#include "data/voicegroups/voicegroup042.h"
-#include "data/voicegroups/voicegroup043.h"
-#include "data/voicegroups/voicegroup044.h"
-#include "data/voicegroups/voicegroup045.h"
-#include "data/voicegroups/voicegroup046.h"
-#include "data/voicegroups/voicegroup047.h"
-#include "data/voicegroups/voicegroup048.h"
-#include "data/voicegroups/voicegroup049.h"
-#include "data/voicegroups/voicegroup050.h"
-#include "data/voicegroups/voicegroup051.h"
-#include "data/voicegroups/voicegroup052.h"
-#include "data/voicegroups/voicegroup053.h"
-#include "data/voicegroups/voicegroup054.h"
-#include "data/voicegroups/voicegroup055.h"
-#include "data/voicegroups/voicegroup056.h"
-#include "data/voicegroups/voicegroup057.h"
-#include "data/voicegroups/voicegroup058.h"
-#include "data/voicegroups/voicegroup059.h"
-#include "data/voicegroups/voicegroup060.h"
-#include "data/voicegroups/voicegroup061.h"
-#include "data/voicegroups/voicegroup062.h"
-#include "data/voicegroups/voicegroup063.h"
-#include "data/voicegroups/voicegroup064.h"
-#include "data/voicegroups/voicegroup065.h"
-#include "data/voicegroups/voicegroup066.h"
-#include "data/voicegroups/voicegroup067.h"
-#include "data/voicegroups/voicegroup068.h"
-#include "data/voicegroups/voicegroup069.h"
-#include "data/voicegroups/voicegroup070.h"
-#include "data/voicegroups/voicegroup071.h"
-#include "data/voicegroups/voicegroup072.h"
-#include "data/voicegroups/voicegroup073.h"
-#include "data/voicegroups/voicegroup074.h"
-#include "data/voicegroups/voicegroup075.h"
-#include "data/voicegroups/voicegroup076.h"
-#include "data/voicegroups/voicegroup077.h"
-#include "data/voicegroups/voicegroup078.h"
-#include "data/voicegroups/voicegroup079.h"
-#include "data/voicegroups/voicegroup080.h"
-#include "data/voicegroups/voicegroup081.h"
-#include "data/voicegroups/voicegroup082.h"
-#include "data/voicegroups/voicegroup083.h"
-#include "data/voicegroups/voicegroup084.h"
-#include "data/voicegroups/voicegroup085.h"
-#include "data/voicegroups/voicegroup086.h"
-#include "data/voicegroups/voicegroup087.h"
-#include "data/voicegroups/voicegroup088.h"
-#include "data/voicegroups/voicegroup089.h"
-#include "data/voicegroups/voicegroup090.h"
-#include "data/voicegroups/voicegroup091.h"
-#include "data/voicegroups/voicegroup092.h"
-#include "data/voicegroups/voicegroup093.h"
-#include "data/voicegroups/voicegroup094.h"
-#include "data/voicegroups/voicegroup095.h"
-#include "data/voicegroups/voicegroup096.h"
-#include "data/voicegroups/voicegroup097.h"
-#include "data/voicegroups/voicegroup098.h"
-#include "data/voicegroups/voicegroup099.h"
-#include "data/voicegroups/voicegroup100.h"
-#include "data/voicegroups/voicegroup101.h"
-#include "data/voicegroups/voicegroup102.h"
-#include "data/voicegroups/voicegroup103.h"
-#include "data/voicegroups/voicegroup104.h"
-#include "data/voicegroups/voicegroup105.h"
-#include "data/voicegroups/voicegroup106.h"
-#include "data/voicegroups/voicegroup107.h"
-#include "data/voicegroups/voicegroup108.h"
-#include "data/voicegroups/voicegroup109.h"
-#include "data/voicegroups/voicegroup110.h"
-#include "data/voicegroups/voicegroup111.h"
-#include "data/voicegroups/voicegroup112.h"
-#include "data/voicegroups/voicegroup113.h"
-#include "data/voicegroups/voicegroup114.h"
-#include "data/voicegroups/voicegroup115.h"
-#include "data/voicegroups/voicegroup116.h"
-#include "data/voicegroups/voicegroup117.h"
-#include "data/voicegroups/voicegroup118.h"
-#include "data/voicegroups/voicegroup119.h"
-#include "data/voicegroups/voicegroup120.h"
-#include "data/voicegroups/voicegroup121.h"
-#include "data/voicegroups/voicegroup122.h"
-#include "data/voicegroups/voicegroup123.h"
-#include "data/voicegroups/voicegroup124.h"
-#include "data/voicegroups/voicegroup125.h"
-#include "data/voicegroups/voicegroup126.h"
-*/
+
 #include "data/voicegroups/voicegroup127.h"
 #include "data/voicegroups/voicegroup128.h"
 
@@ -225,395 +155,37 @@ static const u8 KeySplitTable5[];
 #include "data/voicegroups/voicegroup189.h"
 #include "data/voicegroups/voicegroup190.h"
 
-static const u8 KeySplitTable1[] = // - 36
+const u8 KeySplitTable1[] =
 {
-    0 , // 36
-    0 , // 37
-    0 , // 38
-    0 , // 39
-    0 , // 40
-    0 , // 41
-    0 , // 42
-    0 , // 43
-    0 , // 44
-    0 , // 45
-    0 , // 46
-    0 , // 47
-    0 , // 48
-    0 , // 49
-    0 , // 50
-    0 , // 51
-    0 , // 52
-    0 , // 53
-    0 , // 54
-    1 , // 55
-    1 , // 56
-    1 , // 57
-    1 , // 58
-    1 , // 59
-    1 , // 60
-    1 , // 61
-    1 , // 62
-    1 , // 63
-    1 , // 64
-    1 , // 65
-    1 , // 66
-    1 , // 67
-    1 , // 68
-    1 , // 69
-    2 , // 70
-    2 , // 71
-    2 , // 72
-    2 , // 73
-    2 , // 74
-    2 , // 75
-    2 , // 76
-    2 , // 77
-    2 , // 78
-    2 , // 79
-    2 , // 80
-    2 , // 81
-    2 , // 82
-    2 , // 83
-    2 , // 84
-    2 , // 85
-    2 , // 86
-    2 , // 87
-    2 , // 88
-    2 , // 89
-    2 , // 90
-    3 , // 91
-    3 , // 92
-    3 , // 93
-    3 , // 94
-    3 , // 95
-    3 , // 96
-    3 , // 97
-    3 , // 98
-    3 , // 99
-    3 , // 100
-    3 , // 101
-    3 , // 102
-    3 , // 103
-    3 , // 104
-    3 , // 105
-    3 , // 106
-    3   // 107
+    [(START_KST1 - START_KST1) ... (NOTE_FS3 - START_KST1)] = SAMPLE_VOICE_0, // C2  - F#3
+    [(NOTE_G3    - START_KST1) ... (NOTE_A4  - START_KST1)] = SAMPLE_VOICE_1, // G3  - A4
+    [(NOTE_AS4   - START_KST1) ... (NOTE_FS6 - START_KST1)] = SAMPLE_VOICE_2, // A#4 - F#6
+    [(NOTE_G6    - START_KST1) ... (NOTE_B7  - START_KST1)] = SAMPLE_VOICE_3, // G6  - B7
 };
 
-static const u8 KeySplitTable2[] = // - 36
+const u8 KeySplitTable2[] =
 {
-    0 , // 36
-    0 , // 37
-    0 , // 38
-    0 , // 39
-    0 , // 40
-    0 , // 41
-    0 , // 42
-    0 , // 43
-    0 , // 44
-    0 , // 45
-    0 , // 46
-    0 , // 47
-    0 , // 48
-    0 , // 49
-    0 , // 50
-    0 , // 51
-    0 , // 52
-    0 , // 53
-    0 , // 54
-    0 , // 55
-    0 , // 56
-    0 , // 57
-    0 , // 58
-    0 , // 59
-    0 , // 60
-    0 , // 61
-    0 , // 62
-    0 , // 63
-    0 , // 64
-    0 , // 65
-    0 , // 66
-    0 , // 67
-    0 , // 68
-    1 , // 69
-    1 , // 70
-    1 , // 71
-    1 , // 72
-    1 , // 73
-    1 , // 74
-    1 , // 75
-    1 , // 76
-    1 , // 77
-    1 , // 78
-    1 , // 79
-    1 , // 80
-    2 , // 81
-    2 , // 82
-    2 , // 83
-    2 , // 84
-    2 , // 85
-    2 , // 86
-    2 , // 87
-    2 , // 88
-    2 , // 89
-    2 , // 90
-    2 , // 91
-    2 , // 92
-    2 , // 93
-    2 , // 94
-    2 , // 95
-    2 , // 96
-    2 , // 97
-    2 , // 98
-    2 , // 99
-    2 , // 100
-    2 , // 101
-    2 , // 102
-    2 , // 103
-    2 , // 104
-    2 , // 105
-    2 , // 106
-    2 , // 107
+    [(START_KST2 - START_KST2) ... (NOTE_GS4 - START_KST2)] = SAMPLE_VOICE_0, // C2  - G#4
+    [(NOTE_A4    - START_KST2) ... (NOTE_GS5 - START_KST2)] = SAMPLE_VOICE_1, // A4  - G#5
+    [(NOTE_A5    - START_KST2) ... (NOTE_B7  - START_KST2)] = SAMPLE_VOICE_2, // A5  - B7
 };
 
-static const u8 KeySplitTable3[] = // - 36
+const u8 KeySplitTable3[] =
 {
-    0 , // 36
-    0 , // 37
-    0 , // 38
-    0 , // 39
-    0 , // 40
-    0 , // 41
-    0 , // 42
-    0 , // 43
-    0 , // 44
-    0 , // 45
-    0 , // 46
-    0 , // 47
-    0 , // 48
-    0 , // 49
-    0 , // 50
-    0 , // 51
-    0 , // 52
-    0 , // 53
-    0 , // 54
-    0 , // 55
-    0 , // 56
-    0 , // 57
-    0 , // 58
-    0 , // 59
-    0 , // 60
-    0 , // 61
-    0 , // 62
-    0 , // 63
-    0 , // 64
-    0 , // 65
-    1 , // 66
-    1 , // 67
-    1 , // 68
-    1 , // 69
-    1 , // 70
-    1 , // 71
-    1 , // 72
-    1 , // 73
-    1 , // 74
-    1 , // 75
-    1 , // 76
-    1 , // 77
-    1 , // 78
-    1 , // 79
-    1 , // 80
-    1 , // 81
-    1 , // 82
-    1 , // 83
-    2 , // 84
-    2 , // 85
-    2 , // 86
-    2 , // 87
-    2 , // 88
-    2 , // 89
-    2 , // 90
-    2 , // 91
-    2 , // 92
-    2 , // 93
-    2 , // 94
-    2 , // 95
-    2 , // 96
-    2 , // 97
-    2 , // 98
-    2 , // 99
-    2 , // 100
-    2 , // 101
-    2 , // 102
-    2 , // 103
-    2 , // 104
-    2 , // 105
-    2 , // 106
-    2 , // 107
+    [(START_KST3 - START_KST3) ... (NOTE_F4 - START_KST3)]  = SAMPLE_VOICE_0, // C2  - F4
+    [(NOTE_FS4   - START_KST3) ... (NOTE_B5 - START_KST3)]  = SAMPLE_VOICE_1, // F#4 - B5
+    [(NOTE_C6    - START_KST3) ... (NOTE_B7 - START_KST3)]  = SAMPLE_VOICE_2, // C6  - B7
 };
 
-static const u8 KeySplitTable4[] = // - 24
+const u8 KeySplitTable4[] =
 {
-    0 , // 24
-    0 , // 25
-    0 , // 26
-    0 , // 27
-    0 , // 28
-    0 , // 29
-    0 , // 30
-    0 , // 31
-    0 , // 32
-    0 , // 33
-    0 , // 34
-    0 , // 35
-    0 , // 36
-    0 , // 37
-    0 , // 38
-    0 , // 39
-    0 , // 40
-    0 , // 41
-    1 , // 42
-    1 , // 43
-    1 , // 44
-    1 , // 45
-    1 , // 46
-    1 , // 47
-    1 , // 48
-    1 , // 49
-    1 , // 50
-    1 , // 51
-    1 , // 52
-    1 , // 53
-    1 , // 54
-    1 , // 55
-    1 , // 56
-    1 , // 57
-    1 , // 58
-    1 , // 59
-    1 , // 60
-    1 , // 61
-    1 , // 62
-    1 , // 63
-    1 , // 64
-    1 , // 65
-    1 , // 66
-    1 , // 67
-    1 , // 68
-    1 , // 69
-    1 , // 70
-    1 , // 71
-    1 , // 72
-    1 , // 73
-    1 , // 74
-    1 , // 75
-    1 , // 76
-    1 , // 77
-    1 , // 78
-    1 , // 79
-    1 , // 80
-    1 , // 81
-    1 , // 82
-    1 , // 83
-    1 , // 84
-    1 , // 85
-    1 , // 86
-    1 , // 87
-    1 , // 88
-    1 , // 89
-    1 , // 90
-    1 , // 91
-    1 , // 92
-    1 , // 93
-    1 , // 94
-    1 , // 95
-    1 , // 96
-    1 , // 97
-    1 , // 98
-    1 , // 99
-    1 , // 100
-    1 , // 101
-    1 , // 102
-    1 , // 103
-    1 , // 104
-    1 , // 105
-    1 , // 106
-    1 , // 107
+    [(START_KST4 - START_KST4) ... (NOTE_F2 - START_KST4)]  = SAMPLE_VOICE_0, // C1  - F2
+    [(NOTE_FS2   - START_KST4) ... (NOTE_B7 - START_KST4)]  = SAMPLE_VOICE_1, // F#2 - B7
 };
 
-static const u8 KeySplitTable5[] = // - 36
+const u8 KeySplitTable5[] =
 {
-    0 , // 36
-    0 , // 37
-    0 , // 38
-    0 , // 39
-    0 , // 40
-    0 , // 41
-    0 , // 42
-    0 , // 43
-    0 , // 44
-    0 , // 45
-    0 , // 46
-    0 , // 47
-    0 , // 48
-    0 , // 49
-    0 , // 50
-    0 , // 51
-    0 , // 52
-    0 , // 53
-    0 , // 54
-    0 , // 55
-    0 , // 56
-    0 , // 57
-    0 , // 58
-    0 , // 59
-    0 , // 60
-    0 , // 61
-    0 , // 62
-    0 , // 63
-    0 , // 64
-    0 , // 65
-    1 , // 66
-    1 , // 67
-    1 , // 68
-    1 , // 69
-    1 , // 70
-    1 , // 71
-    1 , // 72
-    1 , // 73
-    1 , // 74
-    1 , // 75
-    1 , // 76
-    1 , // 77
-    1 , // 78
-    1 , // 79
-    1 , // 80
-    1 , // 81
-    1 , // 82
-    1 , // 83
-    1 , // 84
-    1 , // 85
-    1 , // 86
-    1 , // 87
-    1 , // 88
-    1 , // 89
-    1 , // 90
-    1 , // 91
-    1 , // 92
-    1 , // 93
-    1 , // 94
-    1 , // 95
-    1 , // 96
-    1 , // 97
-    1 , // 98
-    1 , // 99
-    1 , // 100
-    1 , // 101
-    1 , // 102
-    1 , // 103
-    1 , // 104
-    1 , // 105
-    1 , // 106
-    1 , // 107
+    [(START_KST5 - START_KST5) ... (NOTE_F4 - START_KST5)]  = SAMPLE_VOICE_0, // C2  - F4
+    [(NOTE_FS4   - START_KST5) ... (NOTE_B7 - START_KST5)]  = SAMPLE_VOICE_1, // F#4 - B7
 };
 

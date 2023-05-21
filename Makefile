@@ -250,6 +250,10 @@ $(C_BUILDDIR)/isagbprn.o: CFLAGS := -mthumb-interwork
 $(C_BUILDDIR)/trainer_tower.o: CFLAGS += -ffreestanding
 $(C_BUILDDIR)/battle_anim_flying.o: CFLAGS += -ffreestanding
 
+$(C_BUILDDIR)/voice_groups.o: override CC1 := $(shell PATH=$(TOOLCHAIN)/bin:PATH $(PREFIX)gcc --print-prog-name=cc1) -quiet
+$(C_BUILDDIR)/voice_groups.o: override CFLAGS := -mthumb -mthumb-interwork -O2 -mcpu=arm7tdmi -mabi=aapcs -fno-toplevel-reorder -fno-aggressive-loop-optimizations -Wno-pointer-to-int-cast
+$(C_BUILDDIR)/voice_groups.o: override CPPFLAGS := -iquote include -D$(GAME_VERSION) -DREVISION=$(GAME_REVISION) -D$(GAME_LANGUAGE) -DMODERN=$(MODERN)
+
 $(C_BUILDDIR)/librfu_intr.o: CC1 := tools/agbcc/bin/agbcc_arm$(EXE)
 $(C_BUILDDIR)/librfu_intr.o: CFLAGS := -O2 -mthumb-interwork -quiet
 else
