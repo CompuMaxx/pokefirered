@@ -4,8 +4,13 @@
 #include "constants/songs.h"
 #include "gba/m4a_internal.h"
 
-#define SONG(_header, _ms, _me) \
-    {.header = (struct SongHeader*)&_header, .ms = _ms, .me = _me} \
+#define SFX_BGM         0
+#define SFX_EFFECT_1    1
+#define SFX_EFFECT_2    2   //fanfares and others effects
+#define SFX_AMBIENT     3
+
+#define SONG(song, type) \
+    {.header = (struct SongHeader*)&song, .ms = type, .me = type} \
 
 extern const struct SongHeader mus_dummy;
 extern const struct SongHeader se_use_item;
