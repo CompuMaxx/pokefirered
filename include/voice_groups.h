@@ -64,10 +64,23 @@ union VoiceGroup
     struct VoiceKeySplit keySplit;
 };
 
-#define DEFAULT_VOICE   {.square = {.type = 1, .key = 60, .pan = 0, .sweep = 0, .duty_cycle = 2, .attack = 0, .decay = 0, .sustain = 15, .release = 0}}
+#define DEFAULT_VOICE       \
+    {                       \
+        .square =           \
+        {                   \
+            .type = 1,      \
+            .key = NOTE_C4, \
+            .pan = 0,       \
+            .sweep = 0,     \
+            .duty_cycle = 2,\
+            .attack = 0,    \
+            .decay = 0,     \
+            .sustain = 15,  \
+            .release = 0    \
+        }                   \
+    }
 
 //Voicegroups should be auto-populated with a DEFAULT VOICE when no voice is defined for a note/instrument.
-//It is necessary to indicate where the voicegroup starts and ends.
 #define VOICEGROUP_FILLER(start,end) [start ... end] = DEFAULT_VOICE
 
 #define VOICE_DIRECTSOUND(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
