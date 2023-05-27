@@ -83,12 +83,12 @@ union VoiceGroup
 //Voicegroups should be auto-populated with a DEFAULT VOICE when no voice is defined for a note/instrument.
 #define VOICEGROUP_FILLER(start,end) [start ... end] = DEFAULT_VOICE
 
-#define VOICE_DIRECTSOUND(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
+#define VOICE_DIRECTSOUND(base_midi_key,pan,sample_data_pointer,_attack,_decay,_sustain,_release)   \
     {.toneData =                                                                                    \
         {                                                                                           \
             .type = 0,                                                                              \
             .key = base_midi_key,                                                                   \
-            .pan_sweep = (_pan)?(0x80|_pan):0,                                                      \
+            .pan_sweep = (pan)?(0x80|pan):0,                                                        \
             .wav = (struct WaveData*)&sample_data_pointer,                                          \
             .attack = _attack,                                                                      \
             .decay = _decay,                                                                        \
@@ -97,26 +97,26 @@ union VoiceGroup
         }                                                                                           \
     }
 
-#define VOICE_DIRECTSOUND_NO_RESAMPLE(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
-    {.toneData =                                                                                                \
-        {                                                                                                       \
-            .type = 8,                                                                                          \
-            .key = base_midi_key,                                                                               \
-            .pan_sweep = (_pan)?(0x80|_pan):0,                                                                  \
-            .wav = (struct WaveData*)&sample_data_pointer,                                                      \
-            .attack = _attack,                                                                                  \
-            .decay = _decay,                                                                                    \
-            .sustain = _sustain,                                                                                \
-            .release = _release                                                                                 \
-        }                                                                                                       \
+#define VOICE_DIRECTSOUND_NO_RESAMPLE(base_midi_key,pan,sample_data_pointer,_attack,_decay,_sustain,_release)\
+    {.toneData =                                                                                             \
+        {                                                                                                    \
+            .type = 8,                                                                                       \
+            .key = base_midi_key,                                                                            \
+            .pan_sweep = (pan)?(0x80|pan):0,                                                                 \
+            .wav = (struct WaveData*)&sample_data_pointer,                                                   \
+            .attack = _attack,                                                                               \
+            .decay = _decay,                                                                                 \
+            .sustain = _sustain,                                                                             \
+            .release = _release                                                                              \
+        }                                                                                                    \
     }
 
-#define VOICE_DIRECTSOUND_ALT(base_midi_key,_pan,sample_data_pointer,_attack,_decay,_sustain,_release)  \
+#define VOICE_DIRECTSOUND_ALT(base_midi_key,pan,sample_data_pointer,_attack,_decay,_sustain,_release)   \
     {.toneData =                                                                                        \
         {                                                                                               \
             .type = 16,                                                                                 \
             .key = base_midi_key,                                                                       \
-            .pan_sweep = (_pan)?(0x80|_pan):0,                                                          \
+            .pan_sweep = (pan)?(0x80|pan):0,                                                            \
             .wav = (struct WaveData*)&sample_data_pointer,                                              \
             .attack = _attack,                                                                          \
             .decay = _decay,                                                                            \
@@ -199,18 +199,18 @@ union VoiceGroup
         }                                                                                                   \
     }
 
-#define VOICE_PROGRAMMABLE_WAVE_ALT(base_midi_key,_pan,wave_samples_pointer,_attack,_decay,_sustain,_release)   \
-    {.programmable =                                                                                            \
-        {                                                                                                       \
-            .type = 11,                                                                                         \
-            .key = base_midi_key,                                                                               \
-            .pan = (_pan)?(0x80|_pan):0,                                                                        \
-            .wav = (struct WaveData*)&wave_samples_pointer,                                                     \
-            .attack = (_attack & 7),                                                                            \
-            .decay = (_decay & 7),                                                                              \
-            .sustain = (_sustain & 15),                                                                         \
-            .release = (_release & 7)                                                                           \
-        }                                                                                                       \
+#define VOICE_PROGRAMMABLE_WAVE_ALT(base_midi_key,_pan,wave_samples_pointer,_attack,_decay,_sustain,_release)\
+    {.programmable =                                                                                         \
+        {                                                                                                    \
+            .type = 11,                                                                                      \
+            .key = base_midi_key,                                                                            \
+            .pan = (_pan)?(0x80|_pan):0,                                                                     \
+            .wav = (struct WaveData*)&wave_samples_pointer,                                                  \
+            .attack = (_attack & 7),                                                                         \
+            .decay = (_decay & 7),                                                                           \
+            .sustain = (_sustain & 15),                                                                      \
+            .release = (_release & 7)                                                                        \
+        }                                                                                                    \
     }
 
 
