@@ -25,7 +25,7 @@ const union VoiceGroup voicegroup174[] =
 };
 
 // why ? maybe an unused voicegroup
-static const union VoiceGroup voicegroup_unused_174[] =
+static const union VoiceGroup unused_voicegroup_174[] =
 {
     VOICEGROUP_FILLER(DRUMKIT_STANDARD,ELECTRIC_GUITAR_MUTED),
 
