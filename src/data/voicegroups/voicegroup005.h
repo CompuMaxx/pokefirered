@@ -11,11 +11,11 @@ const union VoiceGroup voicegroup_trumpet[] =
 };
 
 // why ? maybe an unused voicegroup
-static const union VoiceGroup voicegroup_unused_005[] = 
+static const union VoiceGroup unused_voicegroup_005[] = 
 {
+    VOICEGROUP_FILLER(ACOUSTIC_GRAND_PIANO,GUNSHOT),
+
     [ACOUSTIC_GRAND_PIANO]  = VOICE_SQUARE_1_ALT(60, 0, 38, 2, 1, 0, 0, 0),
-    [BRIGHT_ACOUSTIC_PIANO
-     ... HELICOPTER]        = VOICE_SQUARE_1(60, 0, 0, 2, 0, 0, 15, 0),
     [APPLAUSE]              = VOICE_SQUARE_1_ALT(60, 0, 36, 2, 0, 1, 4, 2),
     [GUNSHOT]               = VOICE_SQUARE_1_ALT(60, 0, 21, 2, 0, 0, 15, 2)
 };
