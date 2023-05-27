@@ -67,7 +67,7 @@
 // just like keySplitTable, voicegroup0002 starts from BASS_DRUM_1
 #define VG002_START BASS_DRUM_1
 
-//drumktiks
+//drumkits
 #define VOICE_DRUMKIT_001       voicegroup001
 #define VOICE_DRUMKIT_002       voicegroup002 - VG002_START
 #define VOICE_DRUMKIT_177       voicegroup177
