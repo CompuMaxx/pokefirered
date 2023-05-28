@@ -34,13 +34,12 @@
  * VOICE_KEYSPLIT_ALL each note (from C-1 to G9 or 0 to 127) can represent
  * the instrument map in General MIDI.
  * 
- * The KeySplitTable does not necessarily have to start from zero (C-1 at 8.176Hz),
- * because it can start from the significant note of the range of notes to be
+ * The KeySplitTable does not necessarily start from zero (C-1 at 8.176Hz),
+ * it can start from the significant note of the range of notes to be
  * represented, as long as the use of notes below the initial one was to be omitted.
  * 
  * For FRLG and RSE, the KeySplitTables start from C2 (36), except KeySplitTable4
- * which starts from C1 (24) because the range of notes in which the TUBA sounds
- * is lower than the rest.
+ * which starts from C1 (24) because the range of notes of the TUBA is lower.
  * 
 */
 
