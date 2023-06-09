@@ -1,0 +1,9 @@
+
+const union VoiceGroup voicegroup181[] =
+{
+    VOICEGROUP_FILLER(ACOUSTIC_GRAND_PIANO,ORCHESTRAL_HARP),
+
+    [BRIGHT_ACOUSTIC_PIANO] = VOICE_KEYSPLIT(voicegroup_piano1, KEYSPLITTABLE_PIANO1_PTR),
+    [ORCHESTRAL_HARP]       = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_harp, 255, 242, 51, 242)
+};
+

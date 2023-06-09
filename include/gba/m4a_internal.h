@@ -363,6 +363,10 @@ struct Song
 extern const struct MusicPlayer gMPlayTable[];
 extern const struct Song gSongTable[];
 
+#define MUSIC_PLAYER_BGM    0
+#define MUSIC_PLAYER_SE1    1
+#define MUSIC_PLAYER_SE2    2
+#define MUSIC_PLAYER_SE3    3  //AMBIENT
 
 
 extern u8 gMPlayMemAccArea[];
@@ -396,8 +400,6 @@ extern const s16 gCgbFreqTable[];
 extern const u8 gNoiseTable[];
 
 extern const struct PokemonCrySong gPokemonCrySongTemplate;
-
-extern const struct ToneData voicegroup000;
 
 extern char gNumMusicPlayers[];
 extern char gMaxLines[];

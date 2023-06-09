@@ -1,0 +1,41 @@
+
+const union VoiceGroup voicegroup177[] =
+{
+    VOICEGROUP_FILLER(NOTE_CN1,NOTE_F6),
+
+    [BASS_DRUM_2]       = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_jingle_bell, 255, 0, 255, 0),
+    [BASS_DRUM_1]       = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_drum_and_percussion_kick, 255, 0, 255, 0),
+    [SIDE_STICK]        = VOICE_DIRECTSOUND_NO_RESAMPLE(67, 71, DirectSoundWaveData_sd90_solo_snare, 255, 180, 175, 228),
+    [SNARE_DRUM_1]      = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sd90_solo_snare, 255, 0, 255, 242),
+    [HAND_CLAP]         = VOICE_DIRECTSOUND_NO_RESAMPLE(65, 0, DirectSoundWaveData_sc88pro_tr909_hand_clap, 255, 255, 255, 127),
+    [SNARE_DRUM_2]      = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_orchestra_snare, 255, 0, 255, 242),
+    [LOW_TOM_2]         = VOICE_DIRECTSOUND(64, 24, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226),
+    [LOW_TOM_1]         = VOICE_DIRECTSOUND(68, 29, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226),
+    [PEDAL_HI_HAT]      = VOICE_DIRECTSOUND_NO_RESAMPLE(60, 64, DirectSoundWaveData_sc88pro_rnd_snare, 255, 0, 255, 242),
+    [MID_TOM_2]         = VOICE_DIRECTSOUND(72, 64, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226),
+    [MID_TOM_1]         = VOICE_DIRECTSOUND(76, 39, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226),
+    [HIGH_TOM_2]        = VOICE_DIRECTSOUND(80, 89, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 226),
+    [CRASH_CYMBAL_1]    = VOICE_DIRECTSOUND_NO_RESAMPLE(33, 10, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231),
+    [HIGH_TOM_1]        = VOICE_DIRECTSOUND(84, 104, DirectSoundWaveData_sd90_ambient_tom, 255, 0, 255, 235),
+    [CHINESE_CYMBAL]    = VOICE_DIRECTSOUND(63, 64, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231),
+    [RIDE_BELL]         = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_dance_drums_ride_bell, 255, 165, 103, 231),
+    [TAMBOURINE]        = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_tambourine, 255, 127, 77, 204),
+    [SPLASH_CYMBAL]     = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_trinity_cymbal_crash, 255, 231, 0, 188),
+    [COWBELL]           = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sd90_cowbell, 255, 0, 255, 242),
+    [CRASH_CYMBAL_2]    = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 118, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231),
+    [RIDE_CYMBAL_2]     = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 255, 235, 0, 231),
+    [HIGH_BONGO]        = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_orchestra_cymbal_crash, 8, 0, 255, 216),
+    [LOW_BONGO]         = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_unused_heart_of_asia_indian_drum, 255, 0, 255, 0),
+    [MUTE_HIGH_CONGA]   = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_mute_high_conga, 255, 0, 255, 0),
+    [OPEN_HIGH_CONGA]   = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0),
+    [LOW_CONGA]         = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_open_low_conga, 255, 0, 255, 0),
+    [MUTE_TRIANGLE]     = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sd90_open_triangle, 255, 242, 103, 188),
+    [OPEN_TRIANGLE]     = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sd90_open_triangle, 255, 242, 103, 188),
+    [SHAKER_GM2]        = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sd90_open_triangle, 255, 165, 103, 188),
+    [JINGLE_BELL_GM2]   = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_sc88pro_jingle_bell, 255, 0, 255, 0),
+    [MUTE_SURDO_GM2]    = VOICE_DIRECTSOUND_NO_RESAMPLE(64, 64, DirectSoundWaveData_ethnic_flavours_atarigane, 255, 0, 255, 0),
+    [OPEN_SURDO_GM2]    = VOICE_DIRECTSOUND(63, 64, DirectSoundWaveData_sc88pro_taiko, 255, 0, 255, 0),
+    [NOTE_E6]           = VOICE_DIRECTSOUND(50, 64, DirectSoundWaveData_ethnic_flavours_kotsuzumi, 255, 0, 255, 0),
+    [NOTE_F6]           = VOICE_DIRECTSOUND(64, 64, DirectSoundWaveData_ethnic_flavours_kotsuzumi, 255, 0, 255, 0)
+};
+

@@ -1,0 +1,12 @@
+
+const union VoiceGroup voicegroup135[] =
+{
+    VOICEGROUP_FILLER(DRUMKIT_STANDARD,LEAD_3_CALLIOPE),
+
+    [DRUMKIT_STANDARD] = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_002),
+    [ACCORDION]        = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_accordion, 85, 137, 180, 204),
+    [LEAD_1_SQUARE]    = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 0, 0, 9, 0),
+    [LEAD_2_SAWTOOTH]  = VOICE_SQUARE_2_ALT(60, 0, 2, 0, 0, 9, 0),
+    [LEAD_3_CALLIOPE]  = VOICE_SQUARE_1_ALT(60, 0, 0, 0, 1, 2, 6, 0)
+};
+

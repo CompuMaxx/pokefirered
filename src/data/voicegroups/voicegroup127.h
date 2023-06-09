@@ -1,0 +1,43 @@
+
+const union VoiceGroup voicegroup127[] =
+{
+    VOICEGROUP_FILLER(ACOUSTIC_GRAND_PIANO,GUNSHOT),
+
+    [ACOUSTIC_GRAND_PIANO] = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_unknown_synth_snare, 255, 249, 103, 165),
+    [ELECTRIC_PIANO_1]  = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 0, 2, 0, 0),
+    [ELECTRIC_PIANO_2]  = VOICE_SQUARE_1_ALT(60, 0, 0, 0, 0, 2, 0, 1),
+    [HARPSICHORD]       = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 0, 4, 0, 1),
+    [CLAVINET]          = VOICE_SQUARE_1_ALT(60, 0, 44, 2, 0, 4, 0, 0),
+    [CELESTA]           = VOICE_SQUARE_1_ALT(60, 0, 38, 0, 0, 4, 0, 0),
+    [GLOCKENSPIEL]      = VOICE_SQUARE_1_ALT(60, 0, 0, 0, 0, 7, 0, 0),
+    [MUSIC_BOX]         = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 2, 0, 15, 0),
+    [VIBRAPHONE]        = VOICE_SQUARE_1_ALT(60, 0, 0, 1, 2, 0, 15, 0),
+    [MARINBA]           = VOICE_SQUARE_1_ALT(60, 0, 23, 1, 0, 1, 9, 0),
+    [XYLOPHONE]         = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 0, 255, 165),
+    [TUBULAR_BELLS]     = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_square_wave, 255, 226, 0, 165),
+    [DULCIMER]          = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 0, 6, 0, 1),
+    [DRAWBAR_ORGAN]     = VOICE_SQUARE_1_ALT(60, 0, 36, 0, 0, 2, 0, 0),
+    [TIMPANI]           = VOICE_DIRECTSOUND(60, 0, DirectSoundWaveData_sc88pro_timpani, 255, 246, 0, 226),
+    [STRING_ENSEMBLE_1] = VOICE_KEYSPLIT(voicegroup_string_ensemble, KEYSPLITTABLE_STRING_ENSEMBLE_PTR),
+    [LEAD_1_SQUARE]     = VOICE_SQUARE_2_ALT(60, 0, 3, 0, 1, 0, 1),
+    [LEAD_2_SAWTOOTH]   = VOICE_SQUARE_1_ALT(60, 0, 0, 3, 0, 1, 0, 1),
+    [LEAD_6_VOICE]      = VOICE_SQUARE_1_ALT(60, 0, 46, 2, 0, 4, 0, 0),
+    [LEAD_7_FIFTHS]     = VOICE_SQUARE_1_ALT(60, 0, 38, 2, 0, 4, 0, 0),
+    [LEAD_8_BASS_LEAD]  = VOICE_SQUARE_1_ALT(60, 0, 119, 2, 0, 0, 15, 1),
+    [PAD_1_NEW_AGE]     = VOICE_SQUARE_1_ALT(60, 0, 0, 2, 0, 0, 15, 1),
+    [PAD_2_WARM]        = VOICE_SQUARE_1_ALT(60, 0, 106, 2, 0, 2, 0, 0),
+    [PAD_3_POLYSYNTH]   = VOICE_SQUARE_1_ALT(60, 0, 23, 2, 0, 1, 9, 0),
+    [PAD_4_CHOIR]       = VOICE_SQUARE_1_ALT(60, 0, 21, 2, 0, 1, 9, 0),
+    [PAD_5_BOWED]       = VOICE_SQUARE_1_ALT(60, 0, 0, 0, 0, 0, 15, 1),
+    [PAD_6_METALLIC]    = VOICE_SQUARE_1_ALT(60, 0, 47, 2, 0, 2, 6, 0),
+    [REVERSE_CYMBAL]    = VOICE_NOISE(60, 0, 0, 0, 7, 15, 0),
+    [GUITAR_FRET_NOISE] = VOICE_NOISE(60, 0, 0, 2, 7, 15, 0),
+    [BREATH_NOISE]      = VOICE_NOISE_ALT(60, 0, 0, 2, 0, 15, 0),
+    [SEASHORE]          = VOICE_NOISE_ALT(60, 0, 1, 0, 0, 15, 0),
+    [BIRD_TWEET]        = VOICE_NOISE_ALT(60, 0, 0, 0, 0, 15, 0),
+    [TELEPHONE_RING]    = VOICE_NOISE_ALT(60, 0, 0, 0, 3, 0, 0),
+    [HELICOPTER]        = VOICE_NOISE_ALT(60, 0, 0, 0, 2, 0, 0),
+    [APPLAUSE]          = VOICE_NOISE_ALT(60, 0, 0, 0, 1, 0, 0),
+    [GUNSHOT]           = VOICE_NOISE_ALT(60, 0, 0, 0, 1, 0, 1)
+};
+
