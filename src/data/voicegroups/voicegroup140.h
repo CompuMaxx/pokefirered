@@ -1,0 +1,9 @@
+
+const union VoiceGroup voicegroup140[] =
+{
+    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(VOICE_DRUMKIT_001),
+    [BRIGHT_ACOUSTIC_PIANO] = VOICE_SQUARE_1(60, 0, 0, 2, 0, 2, 3, 1),
+    [ELECTRIC_GRAND_PIANO]  = VOICE_SQUARE_2_ALT(60, 0, 2, 0, 2, 3, 1),
+    [HONKY_TONK_PIANO]      = VOICE_PROGRAMMABLE_WAVE_ALT(60, 0, ProgrammableWaveData_5, 0, 7, 15, 0)
+};
+
