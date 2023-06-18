@@ -122,4 +122,5 @@ const u8 KeySplitTable5[] =
 };
 
 #include "data/voicegroups/universal_voicegroup.h"
+#include "data/voicegroups/acimut_drumkit.h"
 

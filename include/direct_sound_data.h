@@ -936,4 +936,72 @@ extern const s8 DirectSoundWaveData_FE7_unk_111a804[];
 extern const s8 DirectSoundWaveData_FE7_unk_111cd78[];
 extern const s8 DirectSoundWaveData_FE7_unk_111f0cc[];
 
+//--------------------------------------------------------------
+// ACIMUT'S DRUMKIT
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_27[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_28[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_29[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_30[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_31[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_32[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_33[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_34[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_35[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_36[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_37[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_38[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_39[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_40_standard[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_40_power[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_41[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_42[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_43[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_44_standard[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_44_power[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_45[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_46[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_47[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_48[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_49[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_50[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_51[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_52[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_53[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_54[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_55[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_56[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_57[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_58[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_59[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_60[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_61[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_62[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_63[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_64[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_65[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_66[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_67[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_68[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_69[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_70[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_71[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_72[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_73[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_74[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_75[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_76[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_77[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_78[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_79[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_80[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_81[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_82[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_83[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_84[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_85[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_86[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_87[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H
