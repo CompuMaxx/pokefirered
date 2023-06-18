@@ -12,6 +12,9 @@ UVG_POWER = 193
 $(MID_BUILDDIR)/%.o: $(MID_SUBDIR)/%.s
 	$(AS) $(ASFLAGS) -I sound -o $@ $<
 
+$(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V090
+
 $(MID_SUBDIR)/mus_rocket_hideout.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090
 

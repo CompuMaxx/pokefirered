@@ -348,7 +348,8 @@ const struct Song gSongTable[] =
     [MUS_ENCOUNTER_DEOXYS]      = SONG(mus_encounter_deoxys, MUSIC_PLAYER_BGM),
     [MUS_TRAINER_TOWER]         = SONG(mus_trainer_tower, MUSIC_PLAYER_BGM),
     [MUS_SLOW_PALLET]           = SONG(mus_slow_pallet, MUSIC_PLAYER_BGM),
-    [MUS_TEACHY_TV_MENU]        = SONG(mus_teachy_tv_menu, MUSIC_PLAYER_BGM)
+    [MUS_TEACHY_TV_MENU]        = SONG(mus_teachy_tv_menu, MUSIC_PLAYER_BGM),
+    [MUS_BW_VS_RIVAL]           = SONG(mus_bw_vs_rival, MUSIC_PLAYER_BGM),
 };
 
 static const u32 dummy_song_header = 0;
