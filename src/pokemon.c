@@ -5845,6 +5845,9 @@ static u16 GetBattleBGM(void)
         return MUS_RS_VS_TRAINER;
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
+        if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
+            return MUS_BW_VS_RIVAL;
+
         switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
         {
         case TRAINER_CLASS_CHAMPION:
