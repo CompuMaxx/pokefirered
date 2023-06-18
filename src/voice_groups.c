@@ -120,3 +120,6 @@ const u8 KeySplitTable5[] =
     [KEYSPLIT_RANGE(NOTE_C2,  NOTE_F4, FRENCH_HORN)] = SAMPLE_VOICE_0, // C2  - F4
     [KEYSPLIT_RANGE(NOTE_FS4, NOTE_B7, FRENCH_HORN)] = SAMPLE_VOICE_1, // F#4 - B7
 };
+
+#include "data/voicegroups/universal_voicegroup.h"
+

@@ -26,6 +26,35 @@
 #define SAMPLE_VOICE_1    1
 #define SAMPLE_VOICE_2    2
 #define SAMPLE_VOICE_3    3
+#define SAMPLE_VOICE_4    4
+#define SAMPLE_VOICE_5    5
+#define SAMPLE_VOICE_6    6
+#define SAMPLE_VOICE_7    7
+#define SAMPLE_VOICE_8    8
+#define SAMPLE_VOICE_9    9
+#define SAMPLE_VOICE_10   10
+#define SAMPLE_VOICE_11   11
+#define SAMPLE_VOICE_12   12
+#define SAMPLE_VOICE_13   13
+#define SAMPLE_VOICE_14   14
+#define SAMPLE_VOICE_15   15
+#define SAMPLE_VOICE_16   16
+#define SAMPLE_VOICE_17   17
+#define SAMPLE_VOICE_18   18
+#define SAMPLE_VOICE_19   19
+#define SAMPLE_VOICE_20   20
+#define SAMPLE_VOICE_21   21
+#define SAMPLE_VOICE_22   22
+#define SAMPLE_VOICE_23   23
+#define SAMPLE_VOICE_24   24
+#define SAMPLE_VOICE_25   25
+#define SAMPLE_VOICE_26   26
+#define SAMPLE_VOICE_27   27
+#define SAMPLE_VOICE_28   28
+#define SAMPLE_VOICE_29   29
+#define SAMPLE_VOICE_30   30
+#define SAMPLE_VOICE_31   31
+#define SAMPLE_VOICE_32   32
 
 // just like keySplitTable, voicegroup002 starts from BASS_DRUM_1
 #define DRUMKIT_002_START_NOTE  BASS_DRUM_1
@@ -251,7 +280,6 @@ extern const u8 KeySplitTable3[];
 extern const u8 KeySplitTable4[];
 extern const u8 KeySplitTable5[];
 
-extern const union VoiceGroup voicegroup000[];
 extern const union VoiceGroup voicegroup001[];
 extern const union VoiceGroup voicegroup002[];
 extern const union VoiceGroup voicegroup_piano1[];
@@ -259,74 +287,7 @@ extern const union VoiceGroup voicegroup_string_ensemble[];
 extern const union VoiceGroup voicegroup_trumpet[];
 extern const union VoiceGroup voicegroup_tuba[];
 extern const union VoiceGroup voicegroup_french_horn[];
-extern const union VoiceGroup voicegroup008[];
-extern const union VoiceGroup voicegroup009[];
-extern const union VoiceGroup voicegroup010[];
-extern const union VoiceGroup voicegroup011[];
-extern const union VoiceGroup voicegroup012[];
-extern const union VoiceGroup voicegroup127[];
-extern const union VoiceGroup voicegroup128[];
-extern const union VoiceGroup voicegroup129[];
-extern const union VoiceGroup voicegroup130[];
-extern const union VoiceGroup voicegroup131[];
-extern const union VoiceGroup voicegroup132[];
-extern const union VoiceGroup voicegroup133[];
-extern const union VoiceGroup voicegroup134[];
-extern const union VoiceGroup voicegroup135[];
-extern const union VoiceGroup voicegroup136[];
-extern const union VoiceGroup voicegroup137[];
-extern const union VoiceGroup voicegroup138[];
-extern const union VoiceGroup voicegroup139[];
-extern const union VoiceGroup voicegroup140[];
-extern const union VoiceGroup voicegroup141[];
-extern const union VoiceGroup voicegroup142[];
-extern const union VoiceGroup voicegroup143[];
-extern const union VoiceGroup voicegroup144[];
-extern const union VoiceGroup voicegroup145[];
-extern const union VoiceGroup voicegroup146[];
-extern const union VoiceGroup voicegroup147[];
-extern const union VoiceGroup voicegroup148[];
-extern const union VoiceGroup voicegroup149[];
-extern const union VoiceGroup voicegroup150[];
-extern const union VoiceGroup voicegroup151[];
-extern const union VoiceGroup voicegroup152[];
-extern const union VoiceGroup voicegroup153[];
-extern const union VoiceGroup voicegroup154[];
-extern const union VoiceGroup voicegroup155[];
-extern const union VoiceGroup voicegroup156[];
-extern const union VoiceGroup voicegroup157[];
-extern const union VoiceGroup voicegroup158[];
-extern const union VoiceGroup voicegroup159[];
-extern const union VoiceGroup voicegroup160[];
-extern const union VoiceGroup voicegroup161[];
-extern const union VoiceGroup voicegroup162[];
-extern const union VoiceGroup voicegroup163[];
-extern const union VoiceGroup voicegroup164[];
-extern const union VoiceGroup voicegroup165[];
-extern const union VoiceGroup voicegroup166[];
-extern const union VoiceGroup voicegroup167[];
-extern const union VoiceGroup voicegroup168[];
-extern const union VoiceGroup voicegroup169[];
-extern const union VoiceGroup voicegroup170[];
-extern const union VoiceGroup voicegroup171[];
-extern const union VoiceGroup voicegroup172[];
-extern const union VoiceGroup voicegroup173[];
-extern const union VoiceGroup voicegroup174[];
-extern const union VoiceGroup voicegroup175[];
-extern const union VoiceGroup voicegroup176[];
 extern const union VoiceGroup voicegroup177[];
-extern const union VoiceGroup voicegroup178[];
-extern const union VoiceGroup voicegroup179[];
-extern const union VoiceGroup voicegroup180[];
-extern const union VoiceGroup voicegroup181[];
-extern const union VoiceGroup voicegroup182[];
-extern const union VoiceGroup voicegroup183[];
-extern const union VoiceGroup voicegroup184[];
-extern const union VoiceGroup voicegroup185[];
-extern const union VoiceGroup voicegroup186[];
-extern const union VoiceGroup voicegroup187[];
-extern const union VoiceGroup voicegroup188[];
-extern const union VoiceGroup voicegroup189[];
 extern const union VoiceGroup voicegroup190[];
 
 
