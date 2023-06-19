@@ -965,6 +965,9 @@ SECTIONS {
         sound/songs/midi/mus_slow_pallet.o(.rodata);
         sound/songs/midi/mus_teachy_tv_menu.o(.rodata);
         sound/songs/midi/mus_bw_vs_rival.o(.rodata);
+        sound/songs/midi/mus_bw_route_2.o(.rodata);
+        sound/songs/midi/mus_bw_wild_battle.o(.rodata);
+        sound/songs/midi/mus_bw_the_dreamyard.o(.rodata);
     }
 
     lib_rodata :

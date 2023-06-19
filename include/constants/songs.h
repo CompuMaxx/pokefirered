@@ -353,7 +353,10 @@
 #define MUS_SLOW_PALLET           345 // MUS_RG_SLOWMASARA
 #define MUS_TEACHY_TV_MENU        346 // MUS_RG_TVNOIZE
 
-#define MUS_BW_VS_RIVAL           347
+#define MUS_BW_VS_RIVAL           347//mus_bw_vs_rival
+#define MUS_BW_ROUTE_2            348//mus_bw_route_2
+#define MUS_BW_WILD_BATTLE        349//mus_bw_wild_battle
+#define MUS_BW_THE_DREAMYARD      350//mus_bw_the_dreamyard
 
 #define MUS_NONE                    0xFFFF
 

@@ -9,11 +9,23 @@ UVG_STD = 192
 ## Universal Voicegroup DRUMKIT_POWER by Acimut:
 UVG_POWER = 193
 
+# Universal Voicegroup DRUMKIT_STANDARD by Acimut:
+UVG_STD_2 = 194
+
 $(MID_BUILDDIR)/%.o: $(MID_SUBDIR)/%.s
 	$(AS) $(ASFLAGS) -I sound -o $@ $<
 
 $(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V088
+
+$(MID_SUBDIR)/mus_bw_route_2.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V089
+
+$(MID_SUBDIR)/mus_bw_wild_battle.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
+
+$(MID_SUBDIR)/mus_bw_the_dreamyard.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
 
 $(MID_SUBDIR)/mus_rocket_hideout.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090

@@ -356,5 +356,8 @@ extern const struct SongHeader mus_trainer_tower;
 extern const struct SongHeader mus_slow_pallet;
 extern const struct SongHeader mus_teachy_tv_menu;
 extern const struct SongHeader mus_bw_vs_rival;
+extern const struct SongHeader mus_bw_route_2;
+extern const struct SongHeader mus_bw_wild_battle;
+extern const struct SongHeader mus_bw_the_dreamyard;
 
 #endif // GUARD_SONG_TABLE_H
