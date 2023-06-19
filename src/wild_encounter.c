@@ -16,6 +16,7 @@
 #include "constants/maps.h"
 #include "constants/abilities.h"
 #include "constants/items.h"
+#include "battle.h"
 
 #define MAX_ENCOUNTER_RATE 1600
 
@@ -392,6 +393,8 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
                 // try a regular wild land encounter
                 if (TryGenerateWildMon(gWildMonHeaders[headerId].landMonsInfo, WILD_AREA_LAND, WILD_CHECK_REPEL) == TRUE)
                 {
+                    if (!(Random() % 16))
+                        gBattleTypeFlags = BATTLE_TYPE_CHANSEY;
                     StartWildBattle();
                     return TRUE;
                 }

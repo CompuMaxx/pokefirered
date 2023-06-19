@@ -32,6 +32,7 @@
 #include "constants/songs.h"
 #include "constants/pokemon.h"
 #include "constants/trainers.h"
+#include "random.h"
 
 enum {
     TRANSITION_TYPE_NORMAL,
@@ -245,12 +246,18 @@ void StartWildBattle(void)
 
 static void DoStandardWildBattle(void)
 {
+    u16 song = 0;
     LockPlayerFieldControls();
     FreezeObjectEvents();
     StopPlayerAvatar();
     gMain.savedCallback = CB2_EndWildBattle;
+    if (gBattleTypeFlags & BATTLE_TYPE_CHANSEY)
+    {
+        CreateMonWithNature(&gEnemyParty[0], SPECIES_CHANSEY, GetMonData(&gEnemyParty[0], MON_DATA_LEVEL), USE_RANDOM_IVS, Random() % NUM_NATURES);
+        song = MUS_BW_WILD_BATTLE;
+    }
     gBattleTypeFlags = 0;
-    CreateBattleStartTask(GetWildBattleTransition(), 0);
+    CreateBattleStartTask(GetWildBattleTransition(), song);
     IncrementGameStat(GAME_STAT_TOTAL_BATTLES);
     IncrementGameStat(GAME_STAT_WILD_BATTLES);
 }
