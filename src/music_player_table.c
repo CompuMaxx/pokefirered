@@ -1,6 +1,6 @@
 #include "m4a.h"
 
-#define NUM_TRACKS_BGM 10
+#define NUM_TRACKS_BGM MAX_MUSICPLAYER_TRACKS   //MIDI Channels
 #define NUM_TRACKS_SE1 3
 #define NUM_TRACKS_SE2 9
 #define NUM_TRACKS_SE3 1
