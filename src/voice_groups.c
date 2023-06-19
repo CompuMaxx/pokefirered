@@ -268,7 +268,7 @@ const union VoiceGroup voicegroup191[] =
 //used ACOUSTIC_GRAND_PIANO as DRUMKIT_STANDARD
 const union VoiceGroup voicegroup192[] =
 {
-    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Power),
+    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard),
     [BRIGHT_ACOUSTIC_PIANO] = VOICE_KEYSPLIT(voicegroup_FE7_BrightAcousticPiano, KeySplitTable6),
     [ELECTRIC_GRAND_PIANO]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGrandPiano, KeySplitTable6),
     [HONKY_TONK_PIANO]      = VOICE_KEYSPLIT(voicegroup_FE7_HonkyTonkPiano, KeySplitTable7),
