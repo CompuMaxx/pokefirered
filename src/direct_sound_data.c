@@ -1001,6 +1001,7 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_78[] = INCBIN_S8("sound/d
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_79[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_79_Kawai_K11_Low_Cuica.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_80[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_80_Korg_N1R_Mute_Triangle.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_81[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_81_Korg_N1R_Open_Triangle.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_81_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_81_Roland_SC_88_Metronome_Bell_cut.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_82[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_82_Korg_N1R_Shaker.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_83[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_83_Korg_N1R_Jingle_Bell.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_84[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_84_Kawai_K11_Bell_Tree.bin");

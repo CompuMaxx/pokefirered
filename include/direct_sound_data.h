@@ -1003,6 +1003,7 @@ extern const s8 DirectSoundWaveData_Acimut_Drumkit_78[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_79[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_80[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_81[];
+extern const s8 DirectSoundWaveData_Acimut_Drumkit_81_2[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_82[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_83[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_84[];
