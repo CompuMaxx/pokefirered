@@ -9,7 +9,7 @@ UVG_STD = 192
 ## Universal Voicegroup DRUMKIT_POWER by Acimut:
 UVG_POWER = 193
 
-# Universal Voicegroup DRUMKIT_STANDARD by Acimut:
+# Universal Voicegroup DRUMKIT_STANDARD by Acimut (really is power):
 UVG_STD_2 = 194
 
 $(MID_BUILDDIR)/%.o: $(MID_SUBDIR)/%.s
@@ -175,7 +175,7 @@ $(MID_SUBDIR)/mus_net_center.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V096
 
 $(MID_SUBDIR)/mus_pewter.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V084
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V084
 
 $(MID_SUBDIR)/mus_oak.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V086

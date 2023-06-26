@@ -951,6 +951,7 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_35_power[] = INCBIN_S8("s
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_36[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_36_Korg_N1R_Bass_Drum.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_37[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_37_Yamaha_TG100_Side_Stick.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_38[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_38_Roland_SC_88_Snare_Drum.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_38_power[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_38_Korg_NS5R_Snare_Drum.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_39[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_39_Korg_N1R_Clap.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_40_standard[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_40_Roland_SC_88_Snare_Drum_2.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_40_power[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_40_Korg_NS5R_Power_Snare.bin");
