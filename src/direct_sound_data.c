@@ -1009,3 +1009,44 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_84[] = INCBIN_S8("sound/d
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_85[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_85_Korg_N1R_Castanets.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_86[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_86_Roland_SC_88_Mute_Surdo.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_87[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_87_Roland_SC_88_Open_Surdo.bin");
+
+//--------------------------------------------------------------
+//  Adrian Rios's Trumpet v4.0
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_55[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_56[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_56.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_57[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_57.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_58[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_58.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_59[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_59.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_60[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_60.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_61[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_61.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_62[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_62.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_63[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_63.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_64[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_64.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_65[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_65.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_66[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_66.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_67[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_67.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_68[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_68.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_69[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_69.bin");
+//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_70[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_70.bin");
+//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_71[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_71.bin");
+//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_72[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_72.bin");
+//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_73[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_73.bin");
+//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_74.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74_C4[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_74_C4.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_75[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_75.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_76[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_76.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_77[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_77.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_78[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_78.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_79[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_79.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_80[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_80.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_81[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_81.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_82[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_82.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_83[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_83.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_84[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_84.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_85[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_85.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_86[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_86.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_87[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_87.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_88.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_88_C4.bin");

@@ -1012,4 +1012,45 @@ extern const s8 DirectSoundWaveData_Acimut_Drumkit_85[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_86[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_87[];
 
+//--------------------------------------------------------------
+//  Adrian Rios's Trumpet v4.0
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_55[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_56[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_57[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_58[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_59[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_60[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_61[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_62[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_63[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_64[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_65[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_66[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_67[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_68[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_69[];
+//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_70[];
+//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_71[];
+//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_72[];
+//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_73[];
+//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74_C4[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_75[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_76[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_77[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_78[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_79[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_80[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_81[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_82[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_83[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_84[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_85[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_86[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_87[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88[];
+extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H
