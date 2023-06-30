@@ -1053,4 +1053,16 @@ extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_87[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[];
 
+//--------------------------------------------------------------
+//  Florestan's French Horns
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_39[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_45[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_51[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_57[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_63[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_69[];
+extern const s8 DirectSoundWaveData_Florestan_French_Horn_75[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H

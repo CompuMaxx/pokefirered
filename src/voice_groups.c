@@ -124,6 +124,7 @@ const u8 KeySplitTable5[] =
 #include "data/voicegroups/universal_voicegroup.h"
 #include "data/voicegroups/acimut_drumkit.h"
 #include "data/voicegroups/adrian_rios_trumpet.h"
+#include "data/voicegroups/florestan_french_horn.h"
 
 //--------------------------------------------------------------
 //  Universal Voicegroup FE7 - default Voicegroups
@@ -266,6 +267,7 @@ const union VoiceGroup voicegroup191[] =
 //  Universal Voicegroup FE7
 //  + Acimut's Drumkit
 //  + Adrian Rios's Trumpet
+//  + Florestan French Horns
 //
 //  by Acimut
 //--------------------------------------------------------------
@@ -333,7 +335,7 @@ const union VoiceGroup voicegroup192[] =
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
-    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_FE7_FrenchHorn, KeySplitTable28),
+    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_Florestan_French_Horn, KeySplitTable_Florestan_French_Horn),
     [BRASS_SECTION]         = VOICE_KEYSPLIT(voicegroup_FE7_BrassSection, KeySplitTable28),
     [SYNTH_BRASS_1]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass1, KeySplitTable19),
     [SYNTH_BRASS_2]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass2, KeySplitTable29),
@@ -466,7 +468,7 @@ const union VoiceGroup voicegroup193[] =
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
-    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_FE7_FrenchHorn, KeySplitTable28),
+    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_Florestan_French_Horn, KeySplitTable_Florestan_French_Horn),
     [BRASS_SECTION]         = VOICE_KEYSPLIT(voicegroup_FE7_BrassSection, KeySplitTable28),
     [SYNTH_BRASS_1]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass1, KeySplitTable19),
     [SYNTH_BRASS_2]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass2, KeySplitTable29),
@@ -599,7 +601,7 @@ const union VoiceGroup voicegroup194[] =
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
-    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_FE7_FrenchHorn, KeySplitTable28),
+    [FRENCH_HORN]           = VOICE_KEYSPLIT(voicegroup_Florestan_French_Horn, KeySplitTable_Florestan_French_Horn),
     [BRASS_SECTION]         = VOICE_KEYSPLIT(voicegroup_FE7_BrassSection, KeySplitTable28),
     [SYNTH_BRASS_1]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass1, KeySplitTable19),
     [SYNTH_BRASS_2]         = VOICE_KEYSPLIT(voicegroup_FE7_SynthBrass2, KeySplitTable29),

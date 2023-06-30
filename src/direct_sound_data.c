@@ -1050,3 +1050,15 @@ ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_86[] = INCBIN_S8("so
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_87[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_87.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_88.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_88_C4.bin");
+
+//--------------------------------------------------------------
+//  Florestan's French Horns
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_39[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_39.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_45[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_45.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_51[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_51.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_57[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_57.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_63[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_63.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_69[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_69.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_75[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_75.bin");

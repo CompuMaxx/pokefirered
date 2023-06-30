@@ -599,17 +599,6 @@ const u8 KeySplitTable35[] =
 };
 
 
-// Florestan French Horns
-const u8 KeySplitTable37[] =
-{
-    [NOTE_CN1 ... NOTE_DS2] = SAMPLE_VOICE_0,
-    [NOTE_E2  ... NOTE_A2]  = SAMPLE_VOICE_1,
-    [NOTE_AS2 ... NOTE_DS3] = SAMPLE_VOICE_2,
-    [NOTE_E3  ... NOTE_A3]  = SAMPLE_VOICE_3,
-    [NOTE_AS3 ... NOTE_DS4] = SAMPLE_VOICE_4,
-    [NOTE_E4  ... NOTE_A4]  = SAMPLE_VOICE_5,
-    [NOTE_AS4 ... NOTE_G9]  = SAMPLE_VOICE_6,
-};
 
 // Guitars
 const u8 KeySplitTable38[] =
