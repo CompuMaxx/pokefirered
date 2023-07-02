@@ -128,10 +128,11 @@ const u8 KeySplitTable5[] =
 #include "data/voicegroups/acimut_guitars.h"
 
 //--------------------------------------------------------------
-//  Universal Voicegroup FE7 - default Voicegroups
+//  Universal Voicegroup FE7
+//  binary default Voicegroup
+//  used GUNSHOT as DRUMKIT_CM_64_32L
 //--------------------------------------------------------------
 
-//used GUNSHOT as DRUMKIT_CM_64_32L
 const union VoiceGroup voicegroup191[] =
 {
     [ACOUSTIC_GRAND_PIANO]  = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGrandPiano, KeySplitTable6),

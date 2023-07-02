@@ -19,13 +19,13 @@ $(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V088
 
 $(MID_SUBDIR)/mus_bw_route_2.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V089
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V091
 
 $(MID_SUBDIR)/mus_bw_wild_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
 
 $(MID_SUBDIR)/mus_bw_the_dreamyard.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V085
 
 $(MID_SUBDIR)/mus_rocket_hideout.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090

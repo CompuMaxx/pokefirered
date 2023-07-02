@@ -1,5 +1,6 @@
 //--------------------------------------------------------------
-//  Universal Voicegroup - Acimut Drumkit
+//  Acimut's Drumkit v5.2
+//  by Acimut
 //--------------------------------------------------------------
 
 const union VoiceGroup voicegroup_Acimut_Drumkit_Standard[] =

@@ -1013,7 +1013,8 @@ extern const s8 DirectSoundWaveData_Acimut_Drumkit_86[];
 extern const s8 DirectSoundWaveData_Acimut_Drumkit_87[];
 
 //--------------------------------------------------------------
-//  Adrian Rios's Trumpet v4.0
+//  Adrian Rios's Trumpet
+//  by Acimut
 //--------------------------------------------------------------
 
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_55[];
@@ -1031,11 +1032,6 @@ extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_66[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_67[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_68[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_69[];
-//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_70[];
-//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_71[];
-//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_72[];
-//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_73[];
-//extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74_C4[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_75[];
 extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_76[];
@@ -1055,6 +1051,7 @@ extern const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[];
 
 //--------------------------------------------------------------
 //  Florestan's French Horns
+//  by Acimut
 //--------------------------------------------------------------
 
 extern const s8 DirectSoundWaveData_Florestan_French_Horn_39[];

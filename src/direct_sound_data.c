@@ -572,7 +572,7 @@ ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_2[] = INCB
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_3[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_024_acoustic_guitar_nylon_3.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_4[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_024_acoustic_guitar_nylon_4.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_5[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_024_acoustic_guitar_nylon_5.bin");
-ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_6[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_024_acoustic_guitar_nylon_6.bin");//--------------------------------
+ALIGNED(4) const s8 DirectSoundWaveData_FE7_024_acoustic_guitar_nylon_6[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_024_acoustic_guitar_nylon_6.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_025_acoustic_guitar_steel_0[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_025_acoustic_guitar_steel_0.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_025_acoustic_guitar_steel_1[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_025_acoustic_guitar_steel_1.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_025_acoustic_guitar_steel_2[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_025_acoustic_guitar_steel_2.bin");
@@ -935,7 +935,7 @@ ALIGNED(4) const s8 DirectSoundWaveData_FE7_unk_111cd78[] = INCBIN_S8("sound/dir
 ALIGNED(4) const s8 DirectSoundWaveData_FE7_unk_111f0cc[] = INCBIN_S8("sound/direct_sound_samples/FE7_universal_voicegroup/FE7_unk_111f0cc.bin");
 
 //--------------------------------------------------------------
-// ACIMUT'S DRUMKIT v4.0
+// ACIMUT'S DRUMKIT
 //--------------------------------------------------------------
 
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_27[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_27_Korg_N1R_High_Q.bin");
@@ -1011,7 +1011,8 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_86[] = INCBIN_S8("sound/d
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_Drumkit_87[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Drumkit/Acimut_Drumkit_87_Roland_SC_88_Open_Surdo.bin");
 
 //--------------------------------------------------------------
-//  Adrian Rios's Trumpet v4.0
+//  Adrian Rios's Trumpet
+//  by Acimut
 //--------------------------------------------------------------
 
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_55[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_55.bin");
@@ -1029,11 +1030,6 @@ ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_66[] = INCBIN_S8("so
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_67[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_67.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_68[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_68.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_69[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_69.bin");
-//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_70[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_70.bin");
-//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_71[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_71.bin");
-//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_72[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_72.bin");
-//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_73[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_73.bin");
-//ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_74.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_74_C4[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_74_C4.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_75[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_75.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_76[] = INCBIN_S8("sound/direct_sound_samples/Adrian_Rios_Trumpet/Adrian_Rios_trumpet_76.bin");
@@ -1053,6 +1049,7 @@ ALIGNED(4) const s8 DirectSoundWaveData_Adrian_Rios_Trumpet_88_C4[] = INCBIN_S8(
 
 //--------------------------------------------------------------
 //  Florestan's French Horns
+//  by Acimut
 //--------------------------------------------------------------
 
 ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_39[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_39.bin");
