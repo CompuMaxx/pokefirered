@@ -1062,3 +1062,51 @@ ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_57[] = INCBIN_S8("
 ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_63[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_63.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_69[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_69.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Florestan_French_Horn_75[] = INCBIN_S8("sound/direct_sound_samples/Florestan_French_Horn/Florestan_French_Horns_75.bin");
+
+//--------------------------------------------------------------
+//  Acimut's Guitars
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_40[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_40.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_45[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_45.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_50[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_50.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_59[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_59.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_64[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_64.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_69[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_69.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_71[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_71.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_76[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_024_Nylon_Guitar_76.bin");
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_40[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_40.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_45[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_45.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_50[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_50.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_59[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_59.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_64[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_64.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_69[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_69.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_71[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_71.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_76[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_76.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_84[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_025_Steel_Guitar_84.bin");
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_40[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_40.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_45[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_45.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_50[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_50.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_59[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_59.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_64[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_64.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_69[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_69.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_71[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_71.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_76[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_76.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_79[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_79.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_84[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_029_Less_Paul_Guitar_84.bin");
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_40[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_40.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_45[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_45.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_50[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_50.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_59[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_59.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_64[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_64.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_69[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_69.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_71[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_71.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_76[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_76.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_79[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_79.bin");

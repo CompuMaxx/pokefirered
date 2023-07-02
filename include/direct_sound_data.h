@@ -1065,4 +1065,52 @@ extern const s8 DirectSoundWaveData_Florestan_French_Horn_63[];
 extern const s8 DirectSoundWaveData_Florestan_French_Horn_69[];
 extern const s8 DirectSoundWaveData_Florestan_French_Horn_75[];
 
+//--------------------------------------------------------------
+//  Acimut's Guitars
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_40[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_45[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_50[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_55[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_59[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_64[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_69[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_71[];
+extern const s8 DirectSoundWaveData_Acimut_024_Nylon_Guitar_76[];
+
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_40[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_45[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_50[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_55[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_59[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_64[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_69[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_71[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_76[];
+extern const s8 DirectSoundWaveData_Acimut_025_Steel_Guitar_84[];
+
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_40[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_45[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_50[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_55[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_59[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_64[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_69[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_71[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_76[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_79[];
+extern const s8 DirectSoundWaveData_Acimut_029_Less_Paul_Guitar_84[];
+
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_40[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_45[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_50[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_55[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_59[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_64[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_69[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_71[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_76[];
+extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_79[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H

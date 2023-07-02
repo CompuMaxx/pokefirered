@@ -125,6 +125,7 @@ const u8 KeySplitTable5[] =
 #include "data/voicegroups/acimut_drumkit.h"
 #include "data/voicegroups/adrian_rios_trumpet.h"
 #include "data/voicegroups/florestan_french_horn.h"
+#include "data/voicegroups/acimut_guitars.h"
 
 //--------------------------------------------------------------
 //  Universal Voicegroup FE7 - default Voicegroups
@@ -268,6 +269,7 @@ const union VoiceGroup voicegroup191[] =
 //  + Acimut's Drumkit
 //  + Adrian Rios's Trumpet
 //  + Florestan French Horns
+//  + Acimut's Guitars
 //
 //  by Acimut
 //--------------------------------------------------------------
@@ -299,13 +301,13 @@ const union VoiceGroup voicegroup192[] =
     [ACCORDION]             = VOICE_KEYSPLIT(voicegroup_FE7_Accordion, KeySplitTable18),
     [HARMONICA]             = VOICE_KEYSPLIT(voicegroup_FE7_Harmonica, KeySplitTable19),
     [TANGO_ACCORDION]       = VOICE_KEYSPLIT(voicegroup_FE7_TangoAccordion, KeySplitTable10),
-    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarNylon, KeySplitTable9),
-    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarSteel, KeySplitTable19),
+    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_Acimut_024_Nylon_Guitar, KeySplitTable_Acimut_Guitar),
+    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_Acimut_025_Steel_Guitar, KeySplitTable_Acimut_Guitar),
     [ELECTRIC_GUITAR_JAZZ]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarJazz, KeySplitTable9),
     [ELECTRIC_GUITAR_CLEAN] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarClean, KeySplitTable19),
     [ELECTRIC_GUITAR_MUTED] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarMuted, KeySplitTable20),
-    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_OverdrivenGuitar, KeySplitTable21),
-    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_DistortionGuitar, KeySplitTable22),
+    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_029_Less_Paul_Guitar, KeySplitTable_Acimut_Guitar),
+    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_030_Distortion_Guitar, KeySplitTable_Acimut_Guitar),
     [GUITAR_HARMONICS]      = VOICE_KEYSPLIT(voicegroup_FE7_GuitarHarmonics, KeySplitTable16),
     [ACOUSTIC_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_AcousticBass, KeySplitTable13),
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
@@ -432,13 +434,13 @@ const union VoiceGroup voicegroup193[] =
     [ACCORDION]             = VOICE_KEYSPLIT(voicegroup_FE7_Accordion, KeySplitTable18),
     [HARMONICA]             = VOICE_KEYSPLIT(voicegroup_FE7_Harmonica, KeySplitTable19),
     [TANGO_ACCORDION]       = VOICE_KEYSPLIT(voicegroup_FE7_TangoAccordion, KeySplitTable10),
-    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarNylon, KeySplitTable9),
-    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarSteel, KeySplitTable19),
+    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_Acimut_024_Nylon_Guitar, KeySplitTable_Acimut_Guitar),
+    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_Acimut_025_Steel_Guitar, KeySplitTable_Acimut_Guitar),
     [ELECTRIC_GUITAR_JAZZ]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarJazz, KeySplitTable9),
     [ELECTRIC_GUITAR_CLEAN] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarClean, KeySplitTable19),
     [ELECTRIC_GUITAR_MUTED] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarMuted, KeySplitTable20),
-    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_OverdrivenGuitar, KeySplitTable21),
-    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_DistortionGuitar, KeySplitTable22),
+    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_029_Less_Paul_Guitar, KeySplitTable_Acimut_Guitar),
+    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_030_Distortion_Guitar, KeySplitTable_Acimut_Guitar),
     [GUITAR_HARMONICS]      = VOICE_KEYSPLIT(voicegroup_FE7_GuitarHarmonics, KeySplitTable16),
     [ACOUSTIC_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_AcousticBass, KeySplitTable13),
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
@@ -565,13 +567,13 @@ const union VoiceGroup voicegroup194[] =
     [ACCORDION]             = VOICE_KEYSPLIT(voicegroup_FE7_Accordion, KeySplitTable18),
     [HARMONICA]             = VOICE_KEYSPLIT(voicegroup_FE7_Harmonica, KeySplitTable19),
     [TANGO_ACCORDION]       = VOICE_KEYSPLIT(voicegroup_FE7_TangoAccordion, KeySplitTable10),
-    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarNylon, KeySplitTable9),
-    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_FE7_AcousticGuitarSteel, KeySplitTable19),
+    [ACOUSTIC_GUITAR_NYLON] = VOICE_KEYSPLIT(voicegroup_Acimut_024_Nylon_Guitar, KeySplitTable_Acimut_Guitar),
+    [ACOUSTIC_GUITAR_STEEL] = VOICE_KEYSPLIT(voicegroup_Acimut_025_Steel_Guitar, KeySplitTable_Acimut_Guitar),
     [ELECTRIC_GUITAR_JAZZ]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarJazz, KeySplitTable9),
     [ELECTRIC_GUITAR_CLEAN] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarClean, KeySplitTable19),
     [ELECTRIC_GUITAR_MUTED] = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGuitarMuted, KeySplitTable20),
-    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_OverdrivenGuitar, KeySplitTable21),
-    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_FE7_DistortionGuitar, KeySplitTable22),
+    [OVERDRIVEN_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_029_Less_Paul_Guitar, KeySplitTable_Acimut_Guitar),
+    [DISTORTION_GUITAR]     = VOICE_KEYSPLIT(voicegroup_Acimut_030_Distortion_Guitar, KeySplitTable_Acimut_Guitar),
     [GUITAR_HARMONICS]      = VOICE_KEYSPLIT(voicegroup_FE7_GuitarHarmonics, KeySplitTable16),
     [ACOUSTIC_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_AcousticBass, KeySplitTable13),
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),

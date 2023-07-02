@@ -599,54 +599,6 @@ const u8 KeySplitTable35[] =
 };
 
 
-
-// Guitars
-const u8 KeySplitTable38[] =
-{
-    [NOTE_CN1 ... NOTE_G2] = SAMPLE_VOICE_0,
-    [NOTE_GS2 ... NOTE_C3] = SAMPLE_VOICE_1,
-    [NOTE_CS3 ... NOTE_F3] = SAMPLE_VOICE_2,
-    [NOTE_FS3 ... NOTE_A3] = SAMPLE_VOICE_3,
-    [NOTE_AS3 ... NOTE_C4] = SAMPLE_VOICE_4,
-    [NOTE_CS4 ... NOTE_F4] = SAMPLE_VOICE_5,
-    [NOTE_FS4 ... NOTE_A4] = SAMPLE_VOICE_6,
-    [NOTE_AS4 ... NOTE_C5] = SAMPLE_VOICE_7,
-    [NOTE_CS5 ... NOTE_E5] = SAMPLE_VOICE_8,
-    [NOTE_F5  ... NOTE_B5] = SAMPLE_VOICE_9,
-    [NOTE_C6  ... NOTE_G9] = SAMPLE_VOICE_10,
-};
-
-// Guitars v2 ++
-const u8 KeySplitTable39[] =
-{
-    [NOTE_CN1 ... NOTE_G3] = SAMPLE_VOICE_0,
-    [NOTE_GS3 ... NOTE_C4] = SAMPLE_VOICE_1,
-    [NOTE_CS4 ... NOTE_F4] = SAMPLE_VOICE_2,
-    [NOTE_FS4 ... NOTE_A4] = SAMPLE_VOICE_3,
-    [NOTE_AS4 ... NOTE_C5] = SAMPLE_VOICE_4,
-    [NOTE_CS5 ... NOTE_F5] = SAMPLE_VOICE_5,
-    [NOTE_FS5 ... NOTE_A5] = SAMPLE_VOICE_6,
-    [NOTE_AS5 ... NOTE_C6] = SAMPLE_VOICE_7,
-    [NOTE_CS6 ... NOTE_E6] = SAMPLE_VOICE_8,
-    [NOTE_F6  ... NOTE_B6] = SAMPLE_VOICE_9,
-    [NOTE_C7  ... NOTE_G9] = SAMPLE_VOICE_10,
-};
-
-// Guitars v3
-const u8 KeySplitTable40[] =
-{
-    [NOTE_CN1 ... NOTE_C3]  = SAMPLE_VOICE_0,
-    [NOTE_CS3 ... NOTE_FS3] = SAMPLE_VOICE_1,
-    [NOTE_G3  ... NOTE_C4]  = SAMPLE_VOICE_2,
-    [NOTE_CS4 ... NOTE_FS4] = SAMPLE_VOICE_3,
-    [NOTE_G4  ... NOTE_C5]  = SAMPLE_VOICE_4,
-    [NOTE_CS5 ... NOTE_FS5] = SAMPLE_VOICE_5,
-    [NOTE_G5  ... NOTE_C6]  = SAMPLE_VOICE_6,
-    [NOTE_CS6 ... NOTE_FS6] = SAMPLE_VOICE_7,
-    [NOTE_G6  ... NOTE_G9]  = SAMPLE_VOICE_8,
-};
-
-
 //--------------------------------------------------------------
 //  Universal Voicegroup FE7 - Instruments Voicegroups
 //--------------------------------------------------------------
