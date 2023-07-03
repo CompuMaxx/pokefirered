@@ -355,7 +355,7 @@
 
 // New Music by Acimut
 // BW music
-#define MUS_BW_TITLW_0005         347 //mus_bw_title_0005
+#define MUS_BW_TITLE              347 //mus_bw_title_0005
 #define MUS_BW_NUVEMA_TOWN        348 //mus_bw_nuvema_town
 #define MUS_BW_ACUMULA_TOWN       349 //mus_bw_accumula_town
 #define MUS_BW_ROUTE_2            350 //mus_bw_route_2
@@ -374,7 +374,9 @@
 #define MUS_HGSS_VS_KANTO_TRAINER 362 //mus_hgss_kanto_trainer_battle
 #define MUS_HGSS_VS_WILD_KANTO    363 //mus_hgss_wild_battle_kanto
 // RSE music
-#define MUS_POKEMART              364 //mus_poke_mart
+#define MUS_POKE_MART             364 //mus_poke_mart
+// TH music
+#define MUS_TH_CORPSE_VOYAGE      365 //mus_th11_11_corpse_voyage
 
 #define MUS_NONE                    0xFFFF
 

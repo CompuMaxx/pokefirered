@@ -373,5 +373,6 @@ extern const struct SongHeader mus_hgss_pokemon_center;
 extern const struct SongHeader mus_hgss_kanto_trainer_battle;
 extern const struct SongHeader mus_hgss_wild_battle_kanto;
 extern const struct SongHeader mus_poke_mart;
+extern const struct SongHeader mus_th11_11_corpse_voyage;
 
 #endif // GUARD_SONG_TABLE_H

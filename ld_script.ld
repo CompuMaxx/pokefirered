@@ -982,6 +982,7 @@ SECTIONS {
         sound/songs/midi/mus_hgss_kanto_trainer_battle.o(.rodata);
         sound/songs/midi/mus_hgss_wild_battle_kanto.o(.rodata);
         sound/songs/midi/mus_poke_mart.o(.rodata);
+        sound/songs/midi/mus_th11_11_corpse_voyage.o(.rodata);
     }
 
     lib_rodata :

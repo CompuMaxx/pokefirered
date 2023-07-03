@@ -23,7 +23,7 @@ $(MID_BUILDDIR)/%.o: $(MID_SUBDIR)/%.s
 
 
 $(MID_SUBDIR)/mus_bw_title_0005.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+	$(MID) $< $@ -E -G$(UVG_STD_2) -V090
 
 $(MID_SUBDIR)/mus_bw_nuvema_town.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
@@ -35,13 +35,13 @@ $(MID_SUBDIR)/mus_bw_route_2.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
 
 $(MID_SUBDIR)/mus_bw_gym_003C.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+	$(MID) $< $@ -E -G$(UVG_STD_2) -V090
 
 $(MID_SUBDIR)/mus_bw_the_dreamyard.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V085
+	$(MID) $< $@ -E -G$(UVG_POWER) -V085
 
 $(MID_SUBDIR)/mus_bw_follow_me_0053.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_CM64) -V090
+	$(MID) $< $@ -E -G$(UVG_CM64) -V090
 
 $(MID_SUBDIR)/mus_bw_wild_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
@@ -68,13 +68,16 @@ $(MID_SUBDIR)/mus_hgss_pokemon_center.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
 
 $(MID_SUBDIR)/mus_hgss_kanto_trainer_battle.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V082
 
 $(MID_SUBDIR)/mus_hgss_wild_battle_kanto.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
 
 $(MID_SUBDIR)/mus_poke_mart.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+
+$(MID_SUBDIR)/mus_th11_11_corpse_voyage.s: %.s: %.mid
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_CM64) -V096
 
 
 $(MID_SUBDIR)/mus_rocket_hideout.s: %.s: %.mid

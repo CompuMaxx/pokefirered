@@ -349,7 +349,7 @@ const struct Song gSongTable[] =
     [MUS_TRAINER_TOWER]         = SONG(mus_trainer_tower, MUSIC_PLAYER_BGM),
     [MUS_SLOW_PALLET]           = SONG(mus_slow_pallet, MUSIC_PLAYER_BGM),
     [MUS_TEACHY_TV_MENU]        = SONG(mus_teachy_tv_menu, MUSIC_PLAYER_BGM),
-    [MUS_BW_TITLW_0005]         = SONG(mus_bw_title_0005, MUSIC_PLAYER_BGM),
+    [MUS_BW_TITLE]              = SONG(mus_bw_title_0005, MUSIC_PLAYER_BGM),
     [MUS_BW_NUVEMA_TOWN]        = SONG(mus_bw_nuvema_town, MUSIC_PLAYER_BGM),
     [MUS_BW_ACUMULA_TOWN]       = SONG(mus_bw_accumula_town, MUSIC_PLAYER_BGM),
     [MUS_BW_ROUTE_2]            = SONG(mus_bw_route_2, MUSIC_PLAYER_BGM),
@@ -366,7 +366,8 @@ const struct Song gSongTable[] =
     [MUS_HGSS_POKEMON_CENTER]   = SONG(mus_hgss_pokemon_center, MUSIC_PLAYER_BGM),
     [MUS_HGSS_VS_KANTO_TRAINER] = SONG(mus_hgss_kanto_trainer_battle, MUSIC_PLAYER_BGM),
     [MUS_HGSS_VS_WILD_KANTO]    = SONG(mus_hgss_wild_battle_kanto, MUSIC_PLAYER_BGM),
-    [MUS_POKEMART]              = SONG(mus_poke_mart, MUSIC_PLAYER_BGM),
+    [MUS_POKE_MART]             = SONG(mus_poke_mart, MUSIC_PLAYER_BGM),
+    [MUS_TH_CORPSE_VOYAGE]      = SONG(mus_th11_11_corpse_voyage, MUSIC_PLAYER_BGM),
 };
 
 static const u32 dummy_song_header = 0;
