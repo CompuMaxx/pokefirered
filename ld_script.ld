@@ -964,10 +964,24 @@ SECTIONS {
         sound/songs/midi/mus_trainer_tower.o(.rodata);
         sound/songs/midi/mus_slow_pallet.o(.rodata);
         sound/songs/midi/mus_teachy_tv_menu.o(.rodata);
-        sound/songs/midi/mus_bw_vs_rival.o(.rodata);
+        sound/songs/midi/mus_bw_title_0005.o(.rodata);
+        sound/songs/midi/mus_bw_nuvema_town.o(.rodata);
+        sound/songs/midi/mus_bw_accumula_town.o(.rodata);
         sound/songs/midi/mus_bw_route_2.o(.rodata);
-        sound/songs/midi/mus_bw_wild_battle.o(.rodata);
+        sound/songs/midi/mus_bw_gym_003C.o(.rodata);
         sound/songs/midi/mus_bw_the_dreamyard.o(.rodata);
+        sound/songs/midi/mus_bw_follow_me_0053.o(.rodata);
+        sound/songs/midi/mus_bw_wild_battle.o(.rodata);
+        sound/songs/midi/mus_bw_vs_trainer_007F.o(.rodata);
+        sound/songs/midi/mus_bw_vs_trainer_0080.o(.rodata);
+        sound/songs/midi/mus_bw_vs_gym_leader.o(.rodata);
+        sound/songs/midi/mus_bw_vs_rival.o(.rodata);
+        sound/songs/midi/mus_bw_victory_trainer_0092.o(.rodata);
+        sound/songs/midi/mus_bw_victory_wild_0091.o(.rodata);
+        sound/songs/midi/mus_hgss_pokemon_center.o(.rodata);
+        sound/songs/midi/mus_hgss_kanto_trainer_battle.o(.rodata);
+        sound/songs/midi/mus_hgss_wild_battle_kanto.o(.rodata);
+        sound/songs/midi/mus_poke_mart.o(.rodata);
     }
 
     lib_rodata :

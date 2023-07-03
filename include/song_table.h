@@ -355,9 +355,23 @@ extern const struct SongHeader mus_encounter_deoxys;
 extern const struct SongHeader mus_trainer_tower;
 extern const struct SongHeader mus_slow_pallet;
 extern const struct SongHeader mus_teachy_tv_menu;
-extern const struct SongHeader mus_bw_vs_rival;
+extern const struct SongHeader mus_bw_title_0005;
+extern const struct SongHeader mus_bw_nuvema_town;
+extern const struct SongHeader mus_bw_accumula_town;
 extern const struct SongHeader mus_bw_route_2;
-extern const struct SongHeader mus_bw_wild_battle;
+extern const struct SongHeader mus_bw_gym_003C;
 extern const struct SongHeader mus_bw_the_dreamyard;
+extern const struct SongHeader mus_bw_follow_me_0053;
+extern const struct SongHeader mus_bw_wild_battle;
+extern const struct SongHeader mus_bw_vs_trainer_007F;
+extern const struct SongHeader mus_bw_vs_trainer_0080;
+extern const struct SongHeader mus_bw_vs_gym_leader;
+extern const struct SongHeader mus_bw_vs_rival;
+extern const struct SongHeader mus_bw_victory_trainer_0092;
+extern const struct SongHeader mus_bw_victory_wild_0091;
+extern const struct SongHeader mus_hgss_pokemon_center;
+extern const struct SongHeader mus_hgss_kanto_trainer_battle;
+extern const struct SongHeader mus_hgss_wild_battle_kanto;
+extern const struct SongHeader mus_poke_mart;
 
 #endif // GUARD_SONG_TABLE_H

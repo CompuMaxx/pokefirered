@@ -353,10 +353,28 @@
 #define MUS_SLOW_PALLET           345 // MUS_RG_SLOWMASARA
 #define MUS_TEACHY_TV_MENU        346 // MUS_RG_TVNOIZE
 
-#define MUS_BW_VS_RIVAL           347//mus_bw_vs_rival
-#define MUS_BW_ROUTE_2            348//mus_bw_route_2
-#define MUS_BW_WILD_BATTLE        349//mus_bw_wild_battle
-#define MUS_BW_THE_DREAMYARD      350//mus_bw_the_dreamyard
+// New Music by Acimut
+// BW music
+#define MUS_BW_TITLW_0005         347 //mus_bw_title_0005
+#define MUS_BW_NUVEMA_TOWN        348 //mus_bw_nuvema_town
+#define MUS_BW_ACUMULA_TOWN       349 //mus_bw_accumula_town
+#define MUS_BW_ROUTE_2            350 //mus_bw_route_2
+#define MUS_BW_GYM                351 //mus_bw_gym_003C
+#define MUS_BW_THE_DREAMYARD      352 //mus_bw_the_dreamyard
+#define MUS_BW_FOLLOW_ME          353 //mus_bw_follow_me_0053
+#define MUS_BW_WILD_BATTLE        354 //mus_bw_wild_battle
+#define MUS_BW_VS_TRAINER_007F    355 //mus_bw_vs_trainer_007F
+#define MUS_BW_VS_TRAINER_0080    356 //mus_bw_vs_trainer_0080
+#define MUS_BW_VS_GYM_LEADER      357 //mus_bw_vs_gym_leader
+#define MUS_BW_VS_RIVAL           358 //mus_bw_vs_rival
+#define MUS_BW_VICTORY_TRAINER    359 //mus_bw_victory_trainer_0092
+#define MUS_BW_VICTORY_WILD       360 //mus_bw_victory_wild_0091
+// HGSS music
+#define MUS_HGSS_POKEMON_CENTER   361 //mus_hgss_pokemon_center
+#define MUS_HGSS_VS_KANTO_TRAINER 362 //mus_hgss_kanto_trainer_battle
+#define MUS_HGSS_VS_WILD_KANTO    363 //mus_hgss_wild_battle_kanto
+// RSE music
+#define MUS_POKEMART              364 //mus_poke_mart
 
 #define MUS_NONE                    0xFFFF
 
