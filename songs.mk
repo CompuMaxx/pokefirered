@@ -1,16 +1,22 @@
 STD_REVERB = 50
 
-# Universal Voicegroup DRUMKIT_CM_64_32L from FE7 by Blazer:
-UVG_CM64 = 191
+# Binary default Universal Voicegroup DRUMKIT_CM_64_32L from FE7 by Blazer:
+UVG_FE7 = 191
 
 # Universal Voicegroup DRUMKIT_STANDARD by Acimut:
 UVG_STD = 192
 
-## Universal Voicegroup DRUMKIT_POWER by Acimut:
-UVG_POWER = 193
-
 # Universal Voicegroup DRUMKIT_STANDARD by Acimut (really is power):
-UVG_STD_2 = 194
+UVG_STD_2 = 193
+
+## Universal Voicegroup DRUMKIT_ROOM by Acimut:
+UVG_ROOM = 194
+
+## Universal Voicegroup DRUMKIT_POWER by Acimut:
+UVG_POWER = 195
+
+## Universal Voicegroup DRUMKIT_CM_64_32L by Acimut:
+UVG_CM64 = 196
 
 $(MID_BUILDDIR)/%.o: $(MID_SUBDIR)/%.s
 	$(AS) $(ASFLAGS) -I sound -o $@ $<
