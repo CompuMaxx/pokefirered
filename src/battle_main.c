@@ -1538,6 +1538,7 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
     u32 personalityValue;
     u8 fixedIV;
     s32 i, j;
+    u16 ball;
 
     if (trainerNum == TRAINER_SECRET_BASE)
         return 0;
@@ -1624,6 +1625,17 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
                 }
                 break;
             }
+            }
+            //random pokeball
+            switch (Random() % (ITEM_POKE_BALL + 2))
+            {
+            case 0: ball = ITEM_LUXURY_BALL; break;
+            case 1: ball = ITEM_PREMIER_BALL; break;
+            case 2: ball = ITEM_ULTRA_BALL; break;
+            case 3: ball = ITEM_GREAT_BALL; break;
+            default: ball = ITEM_POKE_BALL; break;
+            }
+            SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
             }
         }
 
@@ -3751,7 +3763,7 @@ static void HandleEndTurn_BattleWon(void)
         case TRAINER_CLASS_ELITE_FOUR:
         case TRAINER_CLASS_GENTLEMAN:
         default:
-            PlayBGM(MUS_VICTORY_TRAINER);
+            PlayBGM(MUS_BW_VICTORY_TRAINER);
             break;
         }
     }

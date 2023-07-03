@@ -5837,30 +5837,44 @@ void ClearBattleMonForms(void)
 
 static u16 GetBattleBGM(void)
 {
+    u8 i;
     if (gBattleTypeFlags & BATTLE_TYPE_KYOGRE_GROUDON)
         return MUS_VS_WILD;
     if (gBattleTypeFlags & BATTLE_TYPE_REGI)
         return MUS_RS_VS_TRAINER;
     if (gBattleTypeFlags & BATTLE_TYPE_LINK)
         return MUS_RS_VS_TRAINER;
+
     if (gBattleTypeFlags & BATTLE_TYPE_TRAINER)
     {
-        if (gBattleTypeFlags & BATTLE_TYPE_FIRST_BATTLE)
-            return MUS_BW_VS_RIVAL;
-
         switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
         {
+        case TRAINER_CLASS_RIVAL_EARLY:
+        case TRAINER_CLASS_RIVAL_LATE:
+            return MUS_BW_VS_RIVAL;
         case TRAINER_CLASS_CHAMPION:
             return MUS_VS_CHAMPION;
         case TRAINER_CLASS_LEADER:
+            return MUS_BW_VS_GYM_LEADER;
         case TRAINER_CLASS_ELITE_FOUR:
             return MUS_VS_GYM_LEADER;
         case TRAINER_CLASS_BOSS:
         case TRAINER_CLASS_TEAM_ROCKET:
         case TRAINER_CLASS_COOLTRAINER:
         case TRAINER_CLASS_GENTLEMAN:
-        case TRAINER_CLASS_RIVAL_LATE:
         default:
+            if (gTrainers[gTrainerBattleOpponent_A].encounterMusic_gender & F_TRAINER_FEMALE)
+            {
+                if(!(Random() % 2))
+                    return MUS_TH_CORPSE_VOYAGE;
+                return MUS_BW_VS_TRAINER_007F;
+            }
+            if (!(Random() % 2))
+            {
+                if(Random() % 2)
+                    return MUS_BW_VS_TRAINER_0080;
+                return MUS_HGSS_VS_KANTO_TRAINER;
+            }
             return MUS_VS_TRAINER;
         }
     }

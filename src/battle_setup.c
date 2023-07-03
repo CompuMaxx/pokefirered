@@ -254,7 +254,12 @@ static void DoStandardWildBattle(void)
     if (gBattleTypeFlags & BATTLE_TYPE_CHANSEY)
     {
         CreateMonWithNature(&gEnemyParty[0], SPECIES_CHANSEY, GetMonData(&gEnemyParty[0], MON_DATA_LEVEL), USE_RANDOM_IVS, Random() % NUM_NATURES);
+        GivePowerToMon(&gEnemyParty[0], 0, MAX_PER_STAT_EVS, 10, MAX_PER_STAT_IVS);
         song = MUS_BW_WILD_BATTLE;
+    }
+    else if (!(Random() % NUM_STATS))
+    {
+        song = MUS_HGSS_VS_WILD_KANTO;
     }
     gBattleTypeFlags = 0;
     CreateBattleStartTask(GetWildBattleTransition(), song);

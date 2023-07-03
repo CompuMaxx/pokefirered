@@ -386,7 +386,7 @@ void CB2_InitTitleScreen(void)
             sTitleScreenTimerTaskId = CreateTask(Task_TitleScreenTimer, 2);
             SetVBlankCallback(VBlankCB);
             SetMainCallback2(CB2_TitleScreenRun);
-            m4aSongNumStart(MUS_TITLE);
+            m4aSongNumStart(MUS_BW_TITLE);
         }
         return;
     }
@@ -428,11 +428,13 @@ static void VBlankCB(void)
         gTasks[sTitleScreenTimerTaskId].data[0]++;
 }
 
+#define TITLE_SCREEN_TIME (72 * 60) //2700 (s * 60)
+
 static void Task_TitleScreenTimer(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
 
-    if (data[0] >= 2700)
+    if (data[0] >= TITLE_SCREEN_TIME)
     {
         sTitleScreenTimerTaskId = TASK_NONE;
         DestroyTask(taskId);

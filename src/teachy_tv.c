@@ -763,7 +763,7 @@ static void TTVcmd_TransitionRenderBg2TeachyTvGraphicInitNpcPos(u8 taskId)
         ScheduleBgCopyTilemapToVram(2);
         data[2] = 0;
         ++data[3];
-        PlayNewMapMusic(MUS_FOLLOW_ME);
+        PlayNewMapMusic(MUS_BW_FOLLOW_ME);
     }
 }
 
@@ -1211,7 +1211,7 @@ static void TeachyTvRestorePlayerPartyCallback(void)
     if (gBattleOutcome == B_OUTCOME_DREW)
         SetTeachyTvControllerModeToResume();
     else
-        PlayNewMapMusic(MUS_FOLLOW_ME);
+        PlayNewMapMusic(MUS_BW_FOLLOW_ME);
     CB2_ReturnToTeachyTV();
 }
 
