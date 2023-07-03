@@ -1636,6 +1636,28 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             default: ball = ITEM_POKE_BALL; break;
             }
             SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
+
+            //power enemy party
+            switch (gTrainers[gTrainerBattleOpponent_A].trainerClass)
+            {
+            case TRAINER_CLASS_RIVAL_LATE:
+                GivePowerToMon(&party[i], 100, MAX_PER_STAT_EVS, 24, MAX_PER_STAT_IVS);
+                break;
+            case TRAINER_CLASS_CHAMPION:
+                GivePowerToMon(&party[i], 200, MAX_PER_STAT_EVS, 28, MAX_PER_STAT_IVS);
+                break;
+            case TRAINER_CLASS_LEADER:
+                GivePowerToMon(&party[i], 100, MAX_PER_STAT_EVS, 24, MAX_PER_STAT_IVS);
+                break;
+            case TRAINER_CLASS_ELITE_FOUR:
+                GivePowerToMon(&party[i], 150, MAX_PER_STAT_EVS, 27, MAX_PER_STAT_IVS);
+                break;
+            default:
+                if (gTrainers[gTrainerBattleOpponent_A].encounterMusic_gender & F_TRAINER_FEMALE)
+                    GivePowerToMon(&party[i], 10, MAX_PER_STAT_EVS, 20, MAX_PER_STAT_IVS);
+                else
+                    GivePowerToMon(&party[i], 25, MAX_PER_STAT_EVS, 15, MAX_PER_STAT_IVS);
+                break;
             }
         }
 

@@ -424,4 +424,6 @@ struct MonSpritesGfxManager *CreateMonSpritesGfxManager(u8 battlePosition, u8 mo
 void DestroyMonSpritesGfxManager(void);
 u8 *MonSpritesGfxManager_GetSpritePtr(u8 bufferId);
 
+void GivePowerToMon(struct Pokemon *mon, u8 min_EV, u8 max_EV, u8 min_IV, u8 max_IV);
+
 #endif // GUARD_POKEMON_H
