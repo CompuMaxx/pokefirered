@@ -395,6 +395,8 @@ bool8 StandardWildEncounter(u32 currMetatileAttrs, u16 previousMetatileBehavior)
                 {
                     if (!(Random() % 16))
                         gBattleTypeFlags = BATTLE_TYPE_CHANSEY;
+                    else if (!(Random() % 8))
+                        gBattleTypeFlags = BATTLE_TYPE_POWER_WILD;
                     StartWildBattle();
                     return TRUE;
                 }
