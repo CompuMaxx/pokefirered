@@ -6468,7 +6468,7 @@ void GivePowerToMon(struct Pokemon *mon, u8 min_EV, u8 max_EV, u8 min_IV, u8 max
     //if (max_EV < min_EV)
     //        max_EV = MAX_PER_STAT_EVS;
 
-    for(i; i > NUM_STATS; i++)
+    for(i; i < NUM_STATS; i++)
     {
         result = GetMonData(mon, MON_DATA_HP_IV + i, NULL);
         if (result <= min_IV)
