@@ -1627,12 +1627,12 @@ static u8 CreateNPCTrainerParty(struct Pokemon *party, u16 trainerNum)
             }
             }
             //random pokeball
-            switch (Random() % (ITEM_POKE_BALL + 2))
+            switch (Random() % (ITEM_PREMIER_BALL + 1))
             {
-            case 0: ball = ITEM_LUXURY_BALL; break;
-            case 1: ball = ITEM_PREMIER_BALL; break;
-            case 2: ball = ITEM_ULTRA_BALL; break;
-            case 3: ball = ITEM_GREAT_BALL; break;
+            case ITEM_ULTRA_BALL: ball = ITEM_ULTRA_BALL; break;
+            case ITEM_GREAT_BALL: ball = ITEM_GREAT_BALL; break;
+            case ITEM_LUXURY_BALL: ball = ITEM_LUXURY_BALL; break;
+            case ITEM_PREMIER_BALL: ball = ITEM_PREMIER_BALL; break;
             default: ball = ITEM_POKE_BALL; break;
             }
             SetMonData(&party[i], MON_DATA_POKEBALL, &ball);
