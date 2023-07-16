@@ -29,7 +29,7 @@
 
 // LANGUAGE_SPANISH o 7 para usar los textos en español
 // LANGUAGE_ENGLISH or 2 to use the english text
-#define EV_IV_TEXT              LANGUAGE_SPANISH
+#define EV_IV_TEXT              LANGUAGE_ENGLISH
 
 // Cambiar a TRUE si la potencia base de Poder Oculto es fija.
 // Set TRUE if Hidden Power's Base Power is fixed
