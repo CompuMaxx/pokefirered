@@ -59,10 +59,10 @@ $(MID_SUBDIR)/mus_bw_vs_rival.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V088
 
 $(MID_SUBDIR)/mus_bw_victory_trainer_0092.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V083
 
 $(MID_SUBDIR)/mus_bw_victory_wild_0091.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V080
 
 $(MID_SUBDIR)/mus_hgss_pokemon_center.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V090
@@ -126,13 +126,13 @@ $(MID_SUBDIR)/mus_caught_intro.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V094 -P5
 
 $(MID_SUBDIR)/mus_level_up.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_obtain_item.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_evolved.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_caught.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V100
@@ -177,31 +177,31 @@ $(MID_SUBDIR)/mus_heal.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
 
 $(MID_SUBDIR)/mus_slots_jackpot.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V100 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V100 -P5
 
 $(MID_SUBDIR)/mus_slots_win.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V100 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V100 -P5
 
 $(MID_SUBDIR)/mus_obtain_badge.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_obtain_berry.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_photo.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G180 -V100 -P5
 
 $(MID_SUBDIR)/mus_evolution_intro.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G009 -V080 -P1
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V080 -P1
 
 $(MID_SUBDIR)/mus_move_deleted.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_obtain_tmhm.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_too_bad.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G008 -V090 -P5
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V090 -P5
 
 $(MID_SUBDIR)/mus_surf.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD) -V071
