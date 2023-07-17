@@ -245,7 +245,17 @@ struct BattleMove
     u8 target;
     s8 priority;
     u8 flags;
+    u8 level;//currently unused
+    u8 category;//PSS
 };
+
+#define MOVE_CATEGORY_PHYSICAL  0
+#define MOVE_CATEGORY_SPECIAL   1
+#define MOVE_CATEGORY_STATUS    2
+
+#define IS_MOVE_PHYSICAL(move)(gBattleMoves[move].category == MOVE_CATEGORY_PHYSICAL)
+#define IS_MOVE_SPECIAL(move)(gBattleMoves[move].category == MOVE_CATEGORY_SPECIAL)
+#define IS_MOVE_STATUS(move)(gBattleMoves[move].category == MOVE_CATEGORY_STATUS)
 
 #define SPINDA_SPOT_WIDTH 16
 #define SPINDA_SPOT_HEIGHT 16

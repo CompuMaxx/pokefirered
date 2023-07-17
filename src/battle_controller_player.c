@@ -11,6 +11,8 @@
 #include "pokemon_special_anim.h"
 #include "task.h"
 #include "util.h"
+#include "menu.h"
+#include "graphics.h"
 #include "battle.h"
 #include "battle_anim.h"
 #include "battle_controllers.h"
@@ -1401,16 +1403,37 @@ static void MoveSelectionDisplayPpNumber(void)
 
 static void MoveSelectionDisplayMoveType(void)
 {
-    u8 *txtPtr;
+    u8 iconId;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
 
-    txtPtr = StringCopy(gDisplayedStringBattle, gText_MoveInterfaceType);
-    *txtPtr++ = EXT_CTRL_CODE_BEGIN;
-    *txtPtr++ = 6;
-    *txtPtr++ = 1;
-    txtPtr = StringCopy(txtPtr, gText_MoveInterfaceDynamicColors);
-    StringCopy(txtPtr, gTypeNames[gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type]);
-    BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_MOVE_TYPE);
+    LoadPalette(gFireRedMenuElements2_Pal, 0xf0, 0x20);
+    FillWindowPixelBuffer(B_WIN_MOVE_TYPE, PIXEL_FILL(15));
+    BlitMoveInfoIcon(B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type + 1,  0, 2);
+    BlitMovePssIcon( B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].category, 33, 2);
+
+    if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].category != MOVE_CATEGORY_STATUS)
+    {
+        gBattleMoveDamage = 40; // EFFECTIVENESS_x1
+        TypeCalc(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]], gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+
+        if (gBattleMoveDamage == TYPE_MUL_NO_EFFECT)
+            iconId = 0; //EFFECTIVENESS x0
+        else if (gBattleMoveDamage <= TYPE_MUL_NOT_EFFECTIVE * 3)   // 10| 15
+            iconId = 1; // EFFECTIVENESS x0.25
+        else if (gBattleMoveDamage <= TYPE_MUL_NOT_EFFECTIVE * 6)   // 20| 30
+            iconId = 2; // EFFECTIVENESS x0.5
+        else if (gBattleMoveDamage >= TYPE_MUL_SUPER_EFFECTIVE * 8) //160|240
+            iconId = 5; // EFFECTIVENESS x4
+        else if (gBattleMoveDamage >= TYPE_MUL_SUPER_EFFECTIVE * 4) // 80|120
+            iconId = 4; // EFFECTIVENESS x2
+        else
+            iconId = 3; // EFFECTIVENESS x1
+
+        BlitMoveEffectiveIcon(B_WIN_MOVE_TYPE, iconId, 50, 2);
+    }
+
+    PutWindowTilemap(B_WIN_MOVE_TYPE);
+    CopyWindowToVram(B_WIN_MOVE_TYPE, COPYWIN_FULL);
 }
 
 void MoveSelectionCreateCursorAt(u8 cursorPosition, u8 arg1)

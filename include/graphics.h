@@ -2745,6 +2745,8 @@ extern const u32 gTrainerPalette_RuinManiac[];
 extern const u32 gTrainerPalette_Lady[];
 extern const u32 gTrainerPalette_Painter[];
 
+extern const u8 gPssIcon_Gfx[];
+
 extern const u8 gFireRedMenuElements_Gfx[];
 extern const u16 gFireRedMenuElements1_Pal[];
 extern const u16 gFireRedMenuElements2_Pal[];
