@@ -757,19 +757,21 @@ void BlitMoveInfoIcon(u8 windowId, u8 iconId, u16 x, u16 y)
     BlitBitmapRectToWindow(windowId, gFireRedMenuElements_Gfx + gMoveMenuInfoIcons[iconId].offset * 32, 0, 0, 128, 128, x, y, gMoveMenuInfoIcons[iconId].width, gMoveMenuInfoIcons[iconId].height);
 }
 
-#define TYPE_ICON_HEIGHT    11
+#define TYPE_ICON_HEIGHT    12
 #define TYPE_ICON_WIDTH     32
+#define PSS_ICON_HEIGHT     11
 #define PSS_ICON_WIDTH      16
 #define LVL_ICON_WIDTH      12
+#define EFFECTIVE_ICON_HEIGHT   10
 #define EFFECTIVE_ICON_WIDTH    12
 
 void BlitMovePssIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 {
-    BlitBitmapRectToWindow(windowId, gPssIcon_Gfx + (iconId * 2 * 32), 0, 0, 128, 32, x, y, PSS_ICON_WIDTH, TYPE_ICON_HEIGHT);
+    BlitBitmapRectToWindow(windowId, gPssIcon_Gfx + (iconId * 2 * 32), 0, 0, 128, 32, x, y, PSS_ICON_WIDTH, PSS_ICON_HEIGHT);
 }
 
 void BlitMoveEffectiveIcon(u8 windowId, u8 iconId, u16 x, u16 y)
 {
-    BlitBitmapRectToWindow(windowId, gPssIcon_Gfx + (iconId * 2 * 32), 0, 16, 128, 32, x, y, EFFECTIVE_ICON_WIDTH, TYPE_ICON_HEIGHT);
+    BlitBitmapRectToWindow(windowId, gPssIcon_Gfx + (iconId * 2 * 32), 0, 16, 128, 32, x, y, EFFECTIVE_ICON_WIDTH, EFFECTIVE_ICON_HEIGHT);
 }
 

@@ -21,6 +21,7 @@
 #include "battle_script_commands.h"
 #include "reshow_battle_screen.h"
 #include "constants/battle_anim.h"
+#include "constants/battle_move_effects.h"
 #include "constants/items.h"
 #include "constants/moves.h"
 #include "constants/songs.h"
@@ -518,6 +519,7 @@ void HandleInputChooseMove(void)
             gMoveSelectionCursor[gActiveBattler] ^= 1;
             PlaySE(SE_SELECT);
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
+            MoveSelectionDisplayPpString();
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
             BeginNormalPaletteFade(0xF0000, 0, 0, 0, RGB_WHITE);
@@ -532,6 +534,7 @@ void HandleInputChooseMove(void)
             gMoveSelectionCursor[gActiveBattler] ^= 1;
             PlaySE(SE_SELECT);
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
+            MoveSelectionDisplayPpString();
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
             BeginNormalPaletteFade(0xF0000, 0, 0, 0, RGB_WHITE);
@@ -545,6 +548,7 @@ void HandleInputChooseMove(void)
             gMoveSelectionCursor[gActiveBattler] ^= 2;
             PlaySE(SE_SELECT);
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
+            MoveSelectionDisplayPpString();
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
             BeginNormalPaletteFade(0xF0000, 0, 0, 0, RGB_WHITE);
@@ -559,6 +563,7 @@ void HandleInputChooseMove(void)
             gMoveSelectionCursor[gActiveBattler] ^= 2;
             PlaySE(SE_SELECT);
             MoveSelectionCreateCursorAt(gMoveSelectionCursor[gActiveBattler], 0);
+            MoveSelectionDisplayPpString();
             MoveSelectionDisplayPpNumber();
             MoveSelectionDisplayMoveType();
             BeginNormalPaletteFade(0xF0000, 0, 0, 0, RGB_WHITE);
@@ -1380,9 +1385,45 @@ static void MoveSelectionDisplayMoveNames(void)
     }
 }
 
+static u8 GetDigitsDec(u32 num)
+{
+    u8 digits = 1;
+    while (num >= 10)
+    {
+        digits++;
+        num = num / 10;
+    }
+    return digits;
+}
+
 static void MoveSelectionDisplayPpString(void)
 {
-    StringCopy(gDisplayedStringBattle, gText_MoveInterfacePP);
+    u8 power;
+    s32 powerBits;
+    u16 move;
+    struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+
+    move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
+    power = gBattleMoves[move].power;
+
+    if(move == MOVE_HIDDEN_POWER)
+    {
+        powerBits = ((gBattleMons[gActiveBattler].hpIV & 2) >> 1)
+                  | ((gBattleMons[gActiveBattler].attackIV & 2) << 0)
+                  | ((gBattleMons[gActiveBattler].defenseIV & 2) << 1)
+                  | ((gBattleMons[gActiveBattler].speedIV & 2) << 2)
+                  | ((gBattleMons[gActiveBattler].spAttackIV & 2) << 3)
+                  | ((gBattleMons[gActiveBattler].spDefenseIV & 2) << 4);
+        power = (40 * powerBits) / 63 + 30;
+    }
+
+    if (power == 0)
+        StringCopy(gDisplayedStringBattle, gText_ThreeHyphens);
+    else if (power == 1 && move != MOVE_HIDDEN_POWER)
+        StringCopy(gDisplayedStringBattle, gText_ThreeQuestionMarks);
+    else
+        ConvertIntToDecimalStringN(gDisplayedStringBattle, power, STR_CONV_MODE_LEFT_ALIGN, GetDigitsDec(power));
+
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_PP);
 }
 
@@ -1401,20 +1442,193 @@ static void MoveSelectionDisplayPpNumber(void)
     BattlePutTextOnWindow(gDisplayedStringBattle, B_WIN_PP_REMAINING);
 }
 
+static u8 MoveTypeCalc(u16 move, u8 attacker, u8 defender)
+{
+    s32 i = 0;
+    u8 flags = 0;
+    u8 moveType;
+    u8 multiplier;
+
+    if (move == MOVE_STRUGGLE)
+        return 0;
+
+    moveType = gBattleMoves[move].type;
+
+    // power x1.5
+    if (IS_BATTLER_OF_TYPE(attacker, moveType))
+    {
+        gBattleMoveDamage = gBattleMoveDamage * 15;
+        gBattleMoveDamage = gBattleMoveDamage / 10;
+    }
+
+    // status prevention
+    if (gBattleMoves[move].category == MOVE_CATEGORY_STATUS)
+    {
+        switch (gBattleMoves[move].effect)
+        {
+        case EFFECT_SLEEP:
+            if (gBattleMons[defender].ability == ABILITY_VITAL_SPIRIT
+            || gBattleMons[defender].ability == ABILITY_INSOMNIA)
+                flags |= MOVE_RESULT_NO_EFFECT;
+            break;
+        case EFFECT_POISON:
+            if (IS_BATTLER_OF_TYPE(defender, TYPE_POISON)
+            || IS_BATTLER_OF_TYPE(defender, TYPE_STEEL)
+            || gBattleMons[defender].ability == ABILITY_IMMUNITY)
+                flags |= MOVE_RESULT_NO_EFFECT;
+            break;
+        case EFFECT_WILL_O_WISP:
+            if (IS_BATTLER_OF_TYPE(defender, TYPE_FIRE)
+            || gBattleMons[defender].ability == ABILITY_WATER_VEIL)
+                flags |= MOVE_RESULT_NO_EFFECT;
+            break;
+        case EFFECT_PARALYZE:
+            if (gBattleMons[defender].ability == ABILITY_LIMBER)
+                flags |= MOVE_RESULT_NO_EFFECT;
+            break;
+        case EFFECT_CONFUSE:
+            if (gBattleMons[defender].ability == ABILITY_OWN_TEMPO)
+                flags |= MOVE_RESULT_NO_EFFECT;
+            break;
+        //KeenEye Prevents loss of accuracy
+        //HyperCutter Prevents ATTACK reduction
+        //ShieldDust Prevents added effects
+        //Oblivious Prevents attraction
+        }
+    }
+
+    if (gBattleMons[defender].ability == ABILITY_LEVITATE && moveType == TYPE_GROUND)
+    {
+        flags |= (MOVE_RESULT_MISSED | MOVE_RESULT_DOESNT_AFFECT_FOE);
+    }
+    else
+    {
+        while (TYPE_EFFECT_ATK_TYPE(i) != TYPE_ENDTABLE)
+        {
+            if (TYPE_EFFECT_ATK_TYPE(i) == TYPE_FORESIGHT)
+            {
+                if (gBattleMons[defender].status2 & STATUS2_FORESIGHT)
+                    break;
+                i += 3;
+                continue;
+            }
+
+            else if (TYPE_EFFECT_ATK_TYPE(i) == moveType)
+            {
+                // check type1
+                if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[defender].type1)
+                {
+                    multiplier = TYPE_EFFECT_MULTIPLIER(i);
+                    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
+                    if (gBattleMoveDamage == 0 && multiplier != 0)
+                        gBattleMoveDamage = 1;
+
+                    switch (multiplier)
+                    {
+                    case TYPE_MUL_NO_EFFECT:
+                        flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+                        flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                        flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+                        break;
+                    case TYPE_MUL_NOT_EFFECTIVE:
+                        if (gBattleMoves[move].power && !(flags & MOVE_RESULT_NO_EFFECT))
+                        {
+                            if (flags & MOVE_RESULT_SUPER_EFFECTIVE)
+                                flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+                            else
+                                flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                        }
+                        break;
+                    case TYPE_MUL_SUPER_EFFECTIVE:
+                        if (gBattleMoves[move].power && !(flags & MOVE_RESULT_NO_EFFECT))
+                        {
+                            if (flags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+                                flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                            else
+                                flags |= MOVE_RESULT_SUPER_EFFECTIVE;
+                        }
+                        break;
+                    }
+                }
+
+                // check type2
+                if (TYPE_EFFECT_DEF_TYPE(i) == gBattleMons[defender].type2 &&
+                    gBattleMons[defender].type1 != gBattleMons[defender].type2)
+                {
+                    multiplier = TYPE_EFFECT_MULTIPLIER(i);
+                    gBattleMoveDamage = gBattleMoveDamage * multiplier / 10;
+                    if (gBattleMoveDamage == 0 && multiplier != 0)
+                        gBattleMoveDamage = 1;
+
+                    switch (multiplier)
+                    {
+                    case TYPE_MUL_NO_EFFECT:
+                        flags |= MOVE_RESULT_DOESNT_AFFECT_FOE;
+                        flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                        flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+                        break;
+                    case TYPE_MUL_NOT_EFFECTIVE:
+                        if (gBattleMoves[move].power && !(flags & MOVE_RESULT_NO_EFFECT))
+                        {
+                            if (flags & MOVE_RESULT_SUPER_EFFECTIVE)
+                                flags &= ~MOVE_RESULT_SUPER_EFFECTIVE;
+                            else
+                                flags |= MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                        }
+                        break;
+                    case TYPE_MUL_SUPER_EFFECTIVE:
+                        if (gBattleMoves[move].power && !(flags & MOVE_RESULT_NO_EFFECT))
+                        {
+                            if (flags & MOVE_RESULT_NOT_VERY_EFFECTIVE)
+                                flags &= ~MOVE_RESULT_NOT_VERY_EFFECTIVE;
+                            else
+                                flags |= MOVE_RESULT_SUPER_EFFECTIVE;
+                        }
+                        break;
+                    }
+                }
+            }
+            i += 3;
+        }
+    }
+
+    return flags;
+}
+
 static void MoveSelectionDisplayMoveType(void)
 {
     u8 iconId;
+    u8 flags;
+    u8 type;
+    s32 typeBits;
     struct ChooseMoveStruct *moveInfo = (struct ChooseMoveStruct *)(&gBattleBufferA[gActiveBattler][4]);
+    u16 move = moveInfo->moves[gMoveSelectionCursor[gActiveBattler]];
 
     LoadPalette(gFireRedMenuElements2_Pal, 0xf0, 0x20);
     FillWindowPixelBuffer(B_WIN_MOVE_TYPE, PIXEL_FILL(15));
-    BlitMoveInfoIcon(B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].type + 1,  0, 2);
-    BlitMovePssIcon( B_WIN_MOVE_TYPE, gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].category, 33, 2);
 
-    if (gBattleMoves[moveInfo->moves[gMoveSelectionCursor[gActiveBattler]]].category != MOVE_CATEGORY_STATUS)
+    type = gBattleMoves[move].type;
+    if(move == MOVE_HIDDEN_POWER)
+    {
+        typeBits  = ((gBattleMons[gActiveBattler].hpIV & 1) << 0)
+                  | ((gBattleMons[gActiveBattler].attackIV & 1) << 1)
+                  | ((gBattleMons[gActiveBattler].defenseIV & 1) << 2)
+                  | ((gBattleMons[gActiveBattler].speedIV & 1) << 3)
+                  | ((gBattleMons[gActiveBattler].spAttackIV & 1) << 4)
+                  | ((gBattleMons[gActiveBattler].spDefenseIV & 1) << 5);
+        type = (15 * typeBits) / 63 + 1;
+        if (type >= TYPE_MYSTERY)
+            type++;
+    }  
+    BlitMoveInfoIcon(B_WIN_MOVE_TYPE, type + 1,  0, 2);
+    BlitMovePssIcon( B_WIN_MOVE_TYPE, gBattleMoves[move].category, 34, 2);
+
+//MOVE_TARGET_DEPENDS | MOVE_TARGET_RANDOM | MOVE_TARGET_BOTH /fix in double battle
+    if (!(gBattleTypeFlags & BATTLE_TYPE_DOUBLE) &&
+        !(gBattleMoves[move].target & (MOVE_TARGET_USER | MOVE_TARGET_OPPONENTS_FIELD)))
     {
         gBattleMoveDamage = 40; // EFFECTIVENESS_x1
-        TypeCalc(moveInfo->moves[gMoveSelectionCursor[gActiveBattler]], gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
+        flags = MoveTypeCalc(move, gActiveBattler, GetBattlerAtPosition(B_POSITION_OPPONENT_LEFT));
 
         if (gBattleMoveDamage == TYPE_MUL_NO_EFFECT)
             iconId = 0; //EFFECTIVENESS x0
@@ -1429,7 +1643,11 @@ static void MoveSelectionDisplayMoveType(void)
         else
             iconId = 3; // EFFECTIVENESS x1
 
-        BlitMoveEffectiveIcon(B_WIN_MOVE_TYPE, iconId, 50, 2);
+        if (flags & MOVE_RESULT_NO_EFFECT)
+            iconId = 0; //EFFECTIVENESS x0
+
+        if (gBattleMoves[move].category != MOVE_CATEGORY_STATUS || !iconId)
+            BlitMoveEffectiveIcon(B_WIN_MOVE_TYPE, iconId, 52, 2);
     }
 
     PutWindowTilemap(B_WIN_MOVE_TYPE);
