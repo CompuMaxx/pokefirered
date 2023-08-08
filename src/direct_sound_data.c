@@ -1107,3 +1107,31 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_69[] = INCB
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_71[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_71.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_76[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_76.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_79[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Guitars/Acimut_030_Distortion_Guitar_79.bin");
+
+//--------------------------------------------------------------
+//  Acimut's Vibraphone
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_011_Vibraphone_48[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Vibraphone/Acimut_011_Vibraphone_48.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_011_Vibraphone_60[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Vibraphone/Acimut_011_Vibraphone_60.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_011_Vibraphone_72[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Vibraphone/Acimut_011_Vibraphone_72.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_011_Vibraphone_84[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Vibraphone/Acimut_011_Vibraphone_84.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_011_Vibraphone_96[] = INCBIN_S8("sound/direct_sound_samples/Acimut_Vibraphone/Acimut_011_Vibraphone_96.bin");
+
+//--------------------------------------------------------------
+//  Acimut's SlapBass1
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_28[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_28.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_33[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_33.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_38[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_38.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_40[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_40.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_43[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_43.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_46[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_46.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_49[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_49.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_52[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_52.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_55.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_58[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_58.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_61[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_61.bin");
+ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_62[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_62.bin");
+

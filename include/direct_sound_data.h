@@ -1110,4 +1110,31 @@ extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_71[];
 extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_76[];
 extern const s8 DirectSoundWaveData_Acimut_030_Distortion_Guitar_79[];
 
+//--------------------------------------------------------------
+//  Acimut's Vibraphone
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Acimut_011_Vibraphone_48[];
+extern const s8 DirectSoundWaveData_Acimut_011_Vibraphone_60[];
+extern const s8 DirectSoundWaveData_Acimut_011_Vibraphone_72[];
+extern const s8 DirectSoundWaveData_Acimut_011_Vibraphone_84[];
+extern const s8 DirectSoundWaveData_Acimut_011_Vibraphone_96[];
+
+//--------------------------------------------------------------
+//  Acimut's SlapBass1
+//--------------------------------------------------------------
+
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_28[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_33[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_38[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_40[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_43[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_46[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_49[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_52[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_55[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_58[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_61[];
+extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_62[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H

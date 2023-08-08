@@ -126,6 +126,8 @@ const u8 KeySplitTable5[] =
 #include "data/voicegroups/adrian_rios_trumpet.h"
 #include "data/voicegroups/florestan_french_horn.h"
 #include "data/voicegroups/acimut_guitars.h"
+#include "data/voicegroups/acimut_vibraphone.h"
+#include "data/voicegroups/acimut_slapbass1.h"
 
 //--------------------------------------------------------------
 //  Universal Voicegroup FE7
@@ -271,6 +273,8 @@ const union VoiceGroup voicegroup191[] =
 //  + Adrian Rios's Trumpet
 //  + Florestan French Horns
 //  + Acimut's Guitars
+//  + Acimut's Vibraphone
+//  + Acimut's SlapBass1
 //
 //  by Acimut
 //--------------------------------------------------------------
@@ -289,7 +293,7 @@ const union VoiceGroup voicegroup192[] =
     [CELESTA]               = VOICE_KEYSPLIT(voicegroup_FE7_Celesta, KeySplitTable11),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
-    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_FE7_Vibraphone, KeySplitTable13),
+    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
     [MARINBA]               = VOICE_KEYSPLIT(voicegroup_FE7_Marimba, KeySplitTable14),
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
@@ -314,7 +318,7 @@ const union VoiceGroup voicegroup192[] =
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
     [ELECTRIC_BASS_PICK]    = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassPick, KeySplitTable20),
     [FRETLESS_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_FretlessBass, KeySplitTable20),
-    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass1, KeySplitTable23),
+    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_Acimut_036_SlapBass1, KeySplitTable_Acimut_SlapBass1),
     [SLAP_BASS_2]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass2, KeySplitTable23),
     [SYNTH_BASS_1]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass1, KeySplitTable23),
     [SYNTH_BASS_2]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass2, KeySplitTable24),
@@ -422,7 +426,7 @@ const union VoiceGroup voicegroup193[] =
     [CELESTA]               = VOICE_KEYSPLIT(voicegroup_FE7_Celesta, KeySplitTable11),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
-    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_FE7_Vibraphone, KeySplitTable13),
+    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
     [MARINBA]               = VOICE_KEYSPLIT(voicegroup_FE7_Marimba, KeySplitTable14),
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
@@ -447,7 +451,7 @@ const union VoiceGroup voicegroup193[] =
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
     [ELECTRIC_BASS_PICK]    = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassPick, KeySplitTable20),
     [FRETLESS_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_FretlessBass, KeySplitTable20),
-    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass1, KeySplitTable23),
+    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_Acimut_036_SlapBass1, KeySplitTable_Acimut_SlapBass1),
     [SLAP_BASS_2]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass2, KeySplitTable23),
     [SYNTH_BASS_1]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass1, KeySplitTable23),
     [SYNTH_BASS_2]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass2, KeySplitTable24),
@@ -555,7 +559,7 @@ const union VoiceGroup voicegroup194[] =
     [DRUMKIT_ROOM]          = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
-    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_FE7_Vibraphone, KeySplitTable13),
+    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
     [MARINBA]               = VOICE_KEYSPLIT(voicegroup_FE7_Marimba, KeySplitTable14),
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
@@ -580,7 +584,7 @@ const union VoiceGroup voicegroup194[] =
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
     [ELECTRIC_BASS_PICK]    = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassPick, KeySplitTable20),
     [FRETLESS_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_FretlessBass, KeySplitTable20),
-    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass1, KeySplitTable23),
+    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_Acimut_036_SlapBass1, KeySplitTable_Acimut_SlapBass1),
     [SLAP_BASS_2]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass2, KeySplitTable23),
     [SYNTH_BASS_1]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass1, KeySplitTable23),
     [SYNTH_BASS_2]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass2, KeySplitTable24),
@@ -688,7 +692,7 @@ const union VoiceGroup voicegroup195[] =
     [CELESTA]               = VOICE_KEYSPLIT(voicegroup_FE7_Celesta, KeySplitTable11),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
-    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_FE7_Vibraphone, KeySplitTable13),
+    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
     [MARINBA]               = VOICE_KEYSPLIT(voicegroup_FE7_Marimba, KeySplitTable14),
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
@@ -713,7 +717,7 @@ const union VoiceGroup voicegroup195[] =
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
     [ELECTRIC_BASS_PICK]    = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassPick, KeySplitTable20),
     [FRETLESS_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_FretlessBass, KeySplitTable20),
-    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass1, KeySplitTable23),
+    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_Acimut_036_SlapBass1, KeySplitTable_Acimut_SlapBass1),
     [SLAP_BASS_2]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass2, KeySplitTable23),
     [SYNTH_BASS_1]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass1, KeySplitTable23),
     [SYNTH_BASS_2]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass2, KeySplitTable24),
@@ -821,7 +825,7 @@ const union VoiceGroup voicegroup196[] =
     [CELESTA]               = VOICE_KEYSPLIT(voicegroup_FE7_Celesta, KeySplitTable11),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
-    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_FE7_Vibraphone, KeySplitTable13),
+    [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
     [MARINBA]               = VOICE_KEYSPLIT(voicegroup_FE7_Marimba, KeySplitTable14),
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
@@ -846,7 +850,7 @@ const union VoiceGroup voicegroup196[] =
     [ELECTRIC_BASS_FINGER]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassFinger, KeySplitTable10),
     [ELECTRIC_BASS_PICK]    = VOICE_KEYSPLIT(voicegroup_FE7_ElectricBassPick, KeySplitTable20),
     [FRETLESS_BASS]         = VOICE_KEYSPLIT(voicegroup_FE7_FretlessBass, KeySplitTable20),
-    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass1, KeySplitTable23),
+    [SLAP_BASS_1]           = VOICE_KEYSPLIT(voicegroup_Acimut_036_SlapBass1, KeySplitTable_Acimut_SlapBass1),
     [SLAP_BASS_2]           = VOICE_KEYSPLIT(voicegroup_FE7_SlapBass2, KeySplitTable23),
     [SYNTH_BASS_1]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass1, KeySplitTable23),
     [SYNTH_BASS_2]          = VOICE_KEYSPLIT(voicegroup_FE7_SynthBass2, KeySplitTable24),
