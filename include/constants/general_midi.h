@@ -299,7 +299,7 @@
 #define NOTE_E1     28  // E1   at   41.203Hz
 #define NOTE_F1     29  // F1   at   43.654Hz
 #define NOTE_FS1    30  // F#1  at   46.249Hz
-#define NOTE_G1     32  // G1   at   48.999Hz
+#define NOTE_G1     31  // G1   at   48.999Hz
 #define NOTE_GS1    32  // G#1  at   51.913Hz
 #define NOTE_A1     33  // A1   at   55.000Hz
 #define NOTE_AS1    34  // A#1  at   58.270Hz
