@@ -47,7 +47,7 @@ $(MID_SUBDIR)/mus_bw_wild_battle.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_STD_2) -V088
 
 $(MID_SUBDIR)/mus_bw_vs_trainer_007F.s: %.s: %.mid
-	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_CM64) -V090
+	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_POWER) -V090
 
 $(MID_SUBDIR)/mus_bw_vs_trainer_0080.s: %.s: %.mid
 	$(MID) $< $@ -E -R$(STD_REVERB) -G$(UVG_CM64) -V090
