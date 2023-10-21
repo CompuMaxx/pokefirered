@@ -363,6 +363,70 @@ struct Song
 extern const struct MusicPlayer gMPlayTable[];
 extern const struct Song gSongTable[];
 
+#define MUSIC_PLAYER_BGM    0
+#define MUSIC_PLAYER_SE1    1
+#define MUSIC_PLAYER_SE2    2
+#define MUSIC_PLAYER_SE3    3
+
+union VoiceGroup;
+
+struct VoiceSquare
+{
+    u8 type;
+    u8 key;
+    u8 pan;
+    u8 sweep;
+    u32 duty_cycle;
+    u8 attack;
+    u8 decay;
+    u8 sustain;
+    u8 release;
+};
+
+struct VoiceProgrammable
+{
+    u8 type;
+    u8 key;
+    u8 pan;
+    u8 unk3;
+    struct WaveData *wav;
+    u8 attack;
+    u8 decay;
+    u8 sustain;
+    u8 release;
+};
+
+struct VoiceNoise
+{
+    u8 type;
+    u8 key;
+    u8 pan;
+    u8 unk3;
+    u32 period;
+    u8 attack;
+    u8 decay;
+    u8 sustain;
+    u8 release;
+};
+
+struct VoiceKeySplit
+{
+    u8 type;
+    u8 key;
+    u8 length;
+    u8 pan_sweep;
+    const union VoiceGroup *voiceGroup;
+    const u8 * keysplit_table_ptr;
+};
+
+union VoiceGroup
+{
+    struct ToneData toneData;
+    struct VoiceSquare square;
+    struct VoiceProgrammable programmable;
+    struct VoiceNoise noise;
+    struct VoiceKeySplit keySplit;
+};
 
 
 extern u8 gMPlayMemAccArea[];
@@ -397,7 +461,7 @@ extern const u8 gNoiseTable[];
 
 extern const struct PokemonCrySong gPokemonCrySongTemplate;
 
-extern const struct ToneData voicegroup000;
+extern const union VoiceGroup voicegroup000[];
 
 extern char gNumMusicPlayers[];
 extern char gMaxLines[];
