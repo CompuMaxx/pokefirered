@@ -1135,3 +1135,79 @@ ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_58[] = INCBIN_S8("s
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_61[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_61.bin");
 ALIGNED(4) const s8 DirectSoundWaveData_Acimut_036_SlapBass1_62[] = INCBIN_S8("sound/direct_sound_samples/Acimut_SlapBass1/Acimut_036_SlapBass1_b_62.bin");
 
+//--------------------------------------------------------------
+// ACIMUT'S DRUMKIT b12r 21024Hz
+//--------------------------------------------------------------
+
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_28_slap_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_28_Korg-N1R-Slap.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_29_scratch_push_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_29_Korg-NS5R-Power-Kick.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_30_scratch_pull_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_30_Korg-M3R-Kick.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_31_sticks_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_31_Korg-N1R-Sticks.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_32_square_click_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_32_Korg-N1R-Square-Click.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_33_metronome_click_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_33_Yamaha-RM50-Typewriter.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_34_metronome_bell_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_34_Roland-SC-88-Metronome-Bell.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_35_bass_drum_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_35_Yamaha-RM50-Studio-Kick-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_36_bass_drum_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_36_Yamaha-RM50-Studio-Kick-1.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_37_side_stick[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_37_Yamaha-RM50-Side-Stick-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_38_snare_drum_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_38_Yamaha-TG100-Snare-Drum.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_39_hand_clap[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_39_Yamaha-RM50-Clap.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_40_snare_drum_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_40_Yamaha-TG100-Snare-Drum-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_41_low_tom_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_41_Roland-SC-88-Low-Tom.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_42_closed_hi_hat[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_42_Yamaha-RM50-Closed-Hi-Hat-1.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_43_low_tom_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_43_Roland-SC-88-Low-Tom-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_44_pedal_hi_hat[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_44_Yamaha-RM50-Pedal-Hi-Hat-1.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_45_mid_tom_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_45_Roland-SC-88-Mid-Tom.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_46_open_hi_hat[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_46_Yamaha-RM50-Open-Hi-Hat-1.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_47_mid_tom_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_47_Roland-SC-88-Mid-Tom-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_48_high_tom_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_48_Roland-SC-88-High-Tom.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_49_crash_cymbal_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_49_Yamaha-TG100-Crash-Cymbal.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_50_high_tom_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_50_Roland-SC-88-High-Tom-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_51_ride_cymbal_1[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_51_Yamaha-TG100-Ride-Cymbal.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_52_chinese_cymbal[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_52_Korg-N1R-Chinese-Cymbal.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_53_ride_bell[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_53_Yamaha-TG100-Ride-Bell.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_54_tambourine[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_54_Korg-N1R-Tambourine.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_55_splash_cymbal[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_55_Yamaha-TG100-Splash-Cymbal.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_56_cowbell[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_56_Roland-SC-88-Cowbell.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_57_crash_cymbal_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_57_Yamaha-TG100-Crash-Cymbal-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_58_vibra_slap[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_58_Roland-R-8-Vibraslap.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_59_ride_cymbal_2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_59_Yamaha-TG100-Ride-Cymbal-2.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_60_high_bongo[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_60_Korg-N1R-High-Bongo.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_61_low_bongo[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_61_Korg-N1R-Low-Bongo.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_62_mute_high_conga[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_62_Conga_Hi_slapop.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_63_open_high_conga[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_63_Conga_Hi.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_64_low_conga[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_64_Conga_Lo_Op.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_65_high_timbale[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_65_Yamaha-RM50-High-Timbale.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_66_low_timbale[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_66_Yamaha-RM50-Low-Timbale.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_67_high_agogo[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_67_Yamaha-TG100-High-Agogo.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_68_low_agogo[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_68_Yamaha-TG100-Agogo.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_69_cabasa[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_69_Korg-N1R-Cabasa.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_70_maracas[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_70_Korg-N1R-Maracas.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_71_short_whistle[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_71_Korg-N1R-Short-Whistle.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_72_long_whistle[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_72_Korg-N1R-Long-Whistle.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_73_short_guiro[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_73_Korg-N1R-Short-Guiro.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_74_logn_guiro[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_74_Korg-N1R-Long-Guiro.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_75_claves[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_75_Korg-N1R-Claves.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_76_high_wood_block[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_76_Korg-N1R-High-Wood-Block.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_77_low_wood_block[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_77_Korg-N1R-Low-Wood-Block.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_78_mute_cuica[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_78_Roland-SC-88-Mute-Cuica.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_79_open_cuica[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_79_Roland-SC-88-Open-Cuica.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_80_mute_triangle[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_80_Kawai-K11-Mute-Triangle.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_81_open_triangle[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_81_Kawai-K11-Open-Triangle.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_82_shaker_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_82_Korg-N1R-Shaker.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_83_jingle_bell_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_83_Korg-N1R-Jingle-Bell.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_84_belltree_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_84_Kawai-K11-Bell-Tree.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_85_castanets_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_85_Korg-N1R-Castanets.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_86_mute_surdo_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_86_Roland-SC-88-Mute-Surdo.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_Standard_87_open_surdo_gm2[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/Acimut_Drumkit_87_Roland-SC-88-Open-Surdo.bin");
+
+
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_55[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_55.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_60[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_60.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_66[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_66.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_75[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_75.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_79[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_79.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_83[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_83.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_87[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_87.bin");
+ALIGNED(4) const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_88[] = INCBIN_S8("sound/direct_sound_samples/Acimut_GM/AGM056_Trumpet_88.bin");
+
+

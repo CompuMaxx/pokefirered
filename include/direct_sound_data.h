@@ -1137,4 +1137,78 @@ extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_58[];
 extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_61[];
 extern const s8 DirectSoundWaveData_Acimut_036_SlapBass1_62[];
 
+//--------------------------------------------------------------
+// ACIMUT'S DRUMKIT b12r 21024Hz
+//--------------------------------------------------------------
+
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_28_slap_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_29_scratch_push_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_30_scratch_pull_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_31_sticks_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_32_square_click_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_33_metronome_click_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_34_metronome_bell_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_35_bass_drum_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_36_bass_drum_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_37_side_stick[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_38_snare_drum_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_39_hand_clap[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_40_snare_drum_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_41_low_tom_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_42_closed_hi_hat[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_43_low_tom_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_44_pedal_hi_hat[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_45_mid_tom_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_46_open_hi_hat[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_47_mid_tom_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_48_high_tom_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_49_crash_cymbal_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_50_high_tom_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_51_ride_cymbal_1[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_52_chinese_cymbal[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_53_ride_bell[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_54_tambourine[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_55_splash_cymbal[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_56_cowbell[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_57_crash_cymbal_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_58_vibra_slap[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_59_ride_cymbal_2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_60_high_bongo[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_61_low_bongo[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_62_mute_high_conga[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_63_open_high_conga[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_64_low_conga[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_65_high_timbale[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_66_low_timbale[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_67_high_agogo[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_68_low_agogo[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_69_cabasa[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_70_maracas[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_71_short_whistle[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_72_long_whistle[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_73_short_guiro[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_74_logn_guiro[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_75_claves[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_76_high_wood_block[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_77_low_wood_block[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_78_mute_cuica[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_79_open_cuica[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_80_mute_triangle[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_81_open_triangle[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_82_shaker_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_83_jingle_bell_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_84_belltree_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_85_castanets_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_86_mute_surdo_gm2[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_Standard_87_open_surdo_gm2[];
+
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_55[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_60[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_66[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_75[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_79[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_83[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_87[];
+extern const s8 gDirectSoundWaveData_Acimut_GM_056_Trumpet_88[];
+
 #endif // GUARD_DIRECT_SOUND_DATA_H

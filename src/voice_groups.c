@@ -123,6 +123,7 @@ const u8 KeySplitTable5[] =
 
 #include "data/voicegroups/universal_voicegroup.h"
 #include "data/voicegroups/acimut_drumkit.h"
+#include "data/voicegroups/acimut_drumkit_b12r.h"
 #include "data/voicegroups/adrian_rios_trumpet.h"
 #include "data/voicegroups/florestan_french_horn.h"
 #include "data/voicegroups/acimut_guitars.h"
@@ -282,7 +283,7 @@ const union VoiceGroup voicegroup191[] =
 //used ACOUSTIC_GRAND_PIANO as DRUMKIT_STANDARD
 const union VoiceGroup voicegroup192[] =
 {
-    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard),
+    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard_b12r),
     [BRIGHT_ACOUSTIC_PIANO] = VOICE_KEYSPLIT(voicegroup_FE7_BrightAcousticPiano, KeySplitTable6),
     [ELECTRIC_GRAND_PIANO]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGrandPiano, KeySplitTable6),
     [HONKY_TONK_PIANO]      = VOICE_KEYSPLIT(voicegroup_FE7_HonkyTonkPiano, KeySplitTable7),
@@ -338,7 +339,7 @@ const union VoiceGroup voicegroup192[] =
     [VOICE_OOHS]            = VOICE_KEYSPLIT(voicegroup_FE7_VoiceOohs, KeySplitTable24),
     [SYNTH_VOICE]           = VOICE_KEYSPLIT(voicegroup_FE7_SynthVoice, KeySplitTable11),
     [ORCHESTRA_HIT]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_055_orchestra_hit, 255, 253, 0, 235),
-    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_Adrian_Rios_Trumpet, KeySplitTable_AR_Trumpet),
+    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_AGM_Trumpet, KeySplitTable_AGM_Trumpet),
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
@@ -415,7 +416,7 @@ const union VoiceGroup voicegroup192[] =
 //used ACOUSTIC_GRAND_PIANO as DRUMKIT_POWER
 const union VoiceGroup voicegroup193[] =
 {
-    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Power),
+    [DRUMKIT_STANDARD]      = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard_b12r),
     [BRIGHT_ACOUSTIC_PIANO] = VOICE_KEYSPLIT(voicegroup_FE7_BrightAcousticPiano, KeySplitTable6),
     [ELECTRIC_GRAND_PIANO]  = VOICE_KEYSPLIT(voicegroup_FE7_ElectricGrandPiano, KeySplitTable6),
     [HONKY_TONK_PIANO]      = VOICE_KEYSPLIT(voicegroup_FE7_HonkyTonkPiano, KeySplitTable7),
@@ -471,7 +472,7 @@ const union VoiceGroup voicegroup193[] =
     [VOICE_OOHS]            = VOICE_KEYSPLIT(voicegroup_FE7_VoiceOohs, KeySplitTable24),
     [SYNTH_VOICE]           = VOICE_KEYSPLIT(voicegroup_FE7_SynthVoice, KeySplitTable11),
     [ORCHESTRA_HIT]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_055_orchestra_hit, 255, 253, 0, 235),
-    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_Adrian_Rios_Trumpet, KeySplitTable_AR_Trumpet),
+    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_AGM_Trumpet, KeySplitTable_AGM_Trumpet),
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
@@ -556,7 +557,7 @@ const union VoiceGroup voicegroup194[] =
     [ELECTRIC_PIANO_2]      = VOICE_KEYSPLIT(voicegroup_FE7_ElectricPiano2, KeySplitTable9),
     [HARPSICHORD]           = VOICE_KEYSPLIT(voicegroup_FE7_Harpsichord, KeySplitTable10),
     [CLAVINET]              = VOICE_KEYSPLIT(voicegroup_FE7_Clavinet, KeySplitTable7),
-    [DRUMKIT_ROOM]          = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard),
+    [DRUMKIT_ROOM]          = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard_b12r),
     [GLOCKENSPIEL]          = VOICE_KEYSPLIT(voicegroup_FE7_Glockenspiel, KeySplitTable12),
     [MUSIC_BOX]             = VOICE_KEYSPLIT(voicegroup_FE7_MusicBox, KeySplitTable11),
     [VIBRAPHONE]            = VOICE_KEYSPLIT(voicegroup_Acimut_011_Vibraphone, KeySplitTable_Acimut_Vibraphone),
@@ -604,7 +605,7 @@ const union VoiceGroup voicegroup194[] =
     [VOICE_OOHS]            = VOICE_KEYSPLIT(voicegroup_FE7_VoiceOohs, KeySplitTable24),
     [SYNTH_VOICE]           = VOICE_KEYSPLIT(voicegroup_FE7_SynthVoice, KeySplitTable11),
     [ORCHESTRA_HIT]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_055_orchestra_hit, 255, 253, 0, 235),
-    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_Adrian_Rios_Trumpet, KeySplitTable_AR_Trumpet),
+    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_AGM_Trumpet, KeySplitTable_AGM_Trumpet),
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
@@ -697,7 +698,7 @@ const union VoiceGroup voicegroup195[] =
     [XYLOPHONE]             = VOICE_KEYSPLIT(voicegroup_FE7_Xylophone, KeySplitTable15),
     [TUBULAR_BELLS]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_014_tubular_bells, 255, 249, 0, 235),
     [DULCIMER]              = VOICE_KEYSPLIT(voicegroup_FE7_Dulcimer, KeySplitTable16),
-    [DRUMKIT_POWER]         = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Power),
+    [DRUMKIT_POWER]         = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard_b12r),
     [PERCUSIVE_ORGAN]       = VOICE_KEYSPLIT(voicegroup_FE7_PercussiveOrgan, KeySplitTable17),
     [ROCK_ORGAN]            = VOICE_KEYSPLIT(voicegroup_FE7_RockOrgan, KeySplitTable17),
     [CHURCH_ORGAN]          = VOICE_KEYSPLIT(voicegroup_FE7_ChurchOrgan, KeySplitTable13),
@@ -737,7 +738,7 @@ const union VoiceGroup voicegroup195[] =
     [VOICE_OOHS]            = VOICE_KEYSPLIT(voicegroup_FE7_VoiceOohs, KeySplitTable24),
     [SYNTH_VOICE]           = VOICE_KEYSPLIT(voicegroup_FE7_SynthVoice, KeySplitTable11),
     [ORCHESTRA_HIT]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_055_orchestra_hit, 255, 253, 0, 235),
-    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_Adrian_Rios_Trumpet, KeySplitTable_AR_Trumpet),
+    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_AGM_Trumpet, KeySplitTable_AGM_Trumpet),
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
@@ -870,7 +871,7 @@ const union VoiceGroup voicegroup196[] =
     [VOICE_OOHS]            = VOICE_KEYSPLIT(voicegroup_FE7_VoiceOohs, KeySplitTable24),
     [SYNTH_VOICE]           = VOICE_KEYSPLIT(voicegroup_FE7_SynthVoice, KeySplitTable11),
     [ORCHESTRA_HIT]         = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_055_orchestra_hit, 255, 253, 0, 235),
-    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_Adrian_Rios_Trumpet, KeySplitTable_AR_Trumpet),
+    [TRUMPET]               = VOICE_KEYSPLIT(voicegroup_AGM_Trumpet, KeySplitTable_AGM_Trumpet),
     [TROMBONE]              = VOICE_KEYSPLIT(voicegroup_FE7_Trombone, KeySplitTable21),
     [TUBA]                  = VOICE_KEYSPLIT(voicegroup_FE7_Tuba, KeySplitTable26),
     [MUTED_TRUMPET]         = VOICE_KEYSPLIT(voicegroup_FE7_MutedTrumpet, KeySplitTable27),
@@ -941,5 +942,5 @@ const union VoiceGroup voicegroup196[] =
     [TELEPHONE_RING]        = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_124_telephone_ring, 255, 0, 255, 235),
     [HELICOPTER]            = VOICE_DIRECTSOUND(NOTE_C4, 0, DirectSoundWaveData_FE7_125_helicopter, 255, 0, 255, 235),
     [APPLAUSE]              = VOICE_KEYSPLIT(voicegroup_FE7_Applause, KeySplitTable35),
-    [DRUMKIT_CM_64_32L]     = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard),
+    [DRUMKIT_CM_64_32L]     = VOICE_KEYSPLIT_ALL(voicegroup_Acimut_Drumkit_Standard_b12r),
 };
